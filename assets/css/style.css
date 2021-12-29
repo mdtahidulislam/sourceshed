@@ -32,7 +32,9 @@ ul{
     --ss-white: #ffffff;
     --ss-light-gray: #8e8e8e;
     --ss-dark-gray: #7a7a7a;
+
     --ss-dark-blue: #011E36;
+    --ss-light-blue: #3366ff;
 
     --ss-text-xss: 12px;
     --ss-text-xs: 14px;
@@ -66,6 +68,9 @@ html, body{
 }
 .text-white{
     color: var(--ss-white);
+}
+.text-light-blue {
+    color: var(--ss-light-blue);
 }
 /* -------- font size */
 /* .text-xl{
@@ -198,11 +203,12 @@ body{
     color: var(--ss-dark-blue);
 }
 /* dropdown */
-.header-nav__menu .topmenu ul {
-    display:none;
-	position: absolute;
+.topmenu ul {
+    display: none;
+    position: absolute;
     min-width: 200px;
-    border: 1px solid black;
+    box-shadow: 0px 0px 5px -1px var(--ss-light-gray);
+    border-radius: 5px;
 }
 .header-nav__menu .topmenu ul li a{
     display: block;
@@ -218,26 +224,32 @@ body{
     top: 100%;
     left: 0;
 }
-.header-nav__menu ul.submenu .submenu{
+.header-nav__menu ul.submenu .submenu {
     top: 0;
     left: 100%;
     overflow-y: scroll;
     height: 300px;
+    padding: 10px 15px;
 }
 .header-nav__menu p {
     margin: 0;
     font-size: var(--ss-text-xs);
+    color: var(--ss-light-gray);
 }
-.disease {
+.header-nav__menu .disease,
+.header-nav__menu .subdesease {
     padding-left: 20px;
 }
-.disease p a {
+.header-nav__menu .disease p a {
     padding: 0 !important;
 }
-.disease a {
-    padding-left: 20px !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+.header-nav__menu .disease a {
+    padding-left: 20px;
+    color: var(--ss-light-blue);
+    text-decoration: underline;
+}
+.header-nav__menu .disease a:hover{
+    color: var(--ss-light-blue);
 }
 .header-nav__brand-logo {
     flex: 0 0 auto;
