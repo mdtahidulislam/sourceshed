@@ -12,6 +12,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico.png">
 
     <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/fontawesome-v6.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-v5.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -233,8 +234,33 @@
                 </div>
             </div>
         </div>
-    </header>
-    <!-- end haeder -->
+    </header> <!-- end haeder -->
+    <!-- start banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-3 text-center">
+                    <div class="banner__logo">
+                        <img src="./assets/img/banner-logo.png" alt="Sourceshed" class="img-fluid">
+                    </div>
+                    <p class="banner__tag">sourcing the best research evidence in ophthalmology</p>
+                    <div class="banner__search">
+                        <form action="" class="search-from d-flex">
+                            <select class="search-select">
+                                <option selected>All</option>
+                                <option value="1">All</option>
+                                <option value="2">Conditions (source book)</option>
+                                <option value="3">Studies (source archive)</option>
+                            </select>
+                            <input type="text" class="search-input" autocomplete="off">
+                            <button type="submit" class="search-submit"><i class="fas fa-fish"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end banner -->
 
     <!-- JS here -->
     <script src="assets/js/main.js"></script>
