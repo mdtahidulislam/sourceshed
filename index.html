@@ -12,9 +12,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico.png">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/fontawesome-v6.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-v5.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome-v6.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-v5.0.2.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel-v2.3.4.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default-v2.3.4.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -41,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="header-nav">
+        <div class="header-nav bg-white">
             <div class="container">
                 <div class="header-nav__container d-flex flex-wrap align-items-center">
                     <div class="header-nav__logo">
@@ -239,13 +241,13 @@
     <section class="banner bg banner-bg">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 offset-md-3 col-sm-12 text-center">
+                <div class="banner-box col-sm-12 text-center">
                     <div class="banner__logo">
                         <img src="./assets/img/banner-logo.png" alt="Sourceshed" class="img-fluid">
+                        <p class="banner__tag text-dark-blue font-semi-bold">sourcing the best research evidence in ophthalmology</p>
                     </div>
-                    <p class="banner__tag text-dark-blue font-semi-bold">sourcing the best research evidence in ophthalmology</p>
                     <div class="banner__search">
-                        <form action="" class="search-from d-flex">
+                        <form action="" class="search-from d-flex justify-content-center">
                             <select class="search-select">
                                 <option selected>All</option>
                                 <option value="1">Conditions (source book)</option>
@@ -258,11 +260,131 @@
                 </div>
             </div>
         </div>
+    </section><!-- end banner -->
+    <!-- start source book -->
+    <section class="sourcebook">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="section-title text-uppercase text-dark-blue font-bold text-xll">Explore Conditions</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sourcebook-tab">
+                        <nav>
+                            <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
+                              <button class="nav-link active" id="retina-tab" data-bs-toggle="tab" data-bs-target="#retina" type="button" role="tab" aria-controls="retina" aria-selected="true">AMD & Retinal Disease</button>
+                              <button class="nav-link" id="cataract-tab" data-bs-toggle="tab" data-bs-target="#cataract" type="button" role="tab" aria-controls="cataract" aria-selected="false">Cataract & Refractive Surgery</button>
+                              <button class="nav-link" id="cornea-tab" data-bs-toggle="tab" data-bs-target="#cornea" type="button" role="tab" aria-controls="cornea" aria-selected="false">Cornea & External Disease</button>
+                              <button class="nav-link" id="glucoma-tab" data-bs-toggle="tab" data-bs-target="#glucoma" type="button" role="tab" aria-controls="glucoma" aria-selected="false">Glaucoma</button>
+                              <button class="nav-link" id="pediatric-tab" data-bs-toggle="tab" data-bs-target="#pediatric" type="button" role="tab" aria-controls="pediatric" aria-selected="false">Pediatric Ophthalmology</button>
+                            </div>
+                        </nav>
+                        <div class="subtitle d-flex justify-content-between align-items-center mt-3">
+                            <h2 class="text-dark-blue text-m mb-0">RetinalConditions</h2>
+                            <a href="#" class="tab-viewall text-light-blue font-medium">View all</a>
+                        </div>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="retina" role="tabpanel" aria-labelledby="retina-tab">
+                                <div class="sourcebook-active owl-carousel">
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
+                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
+                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
+                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
+                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
+                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
+                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
+                                                <div class="card-body">
+                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
+                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="cataract" role="tabpanel" aria-labelledby="cataract-tab">...</div>
+                            <div class="tab-pane fade" id="cornea" role="tabpanel" aria-labelledby="cornea-tab">...</div>
+                            <div class="tab-pane fade" id="glucoma" role="tabpanel" aria-labelledby="glucoma-tab">...</div>
+                            <div class="tab-pane fade" id="pediatric" role="tabpanel" aria-labelledby="pediatric-tab">...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- end banner -->
+    <!-- end source book -->
 
     <!-- JS here -->
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/jquery-v3.6.0.min.js"></script>
+    <script src="./assets//js/popper-v2.9.2.min.js"></script>
+    <script src="./assets//js/bootstrap-v5.0.2.min.js"></script>
+    <script src="./assets/js/owl.carousel-v2.3.4.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
