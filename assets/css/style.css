@@ -446,6 +446,7 @@ body{
 }
 /* sourcebook carosel btn */
 .sourcebook-active .owl-nav {
+    display: block !important;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
