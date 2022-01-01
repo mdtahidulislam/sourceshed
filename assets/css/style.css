@@ -261,7 +261,7 @@ body{
 .header-nav__menu li {
     position: relative;
 }
-.header-nav__menu ul li a{
+.header-nav__menu ul li a {
     font-size: var(--ss-text-xs);
     font-weight: 400;
     color: var(--ss-dark-gray);
@@ -269,14 +269,16 @@ body{
 .header-nav__menu ul li a:hover{
     color: var(--ss-dark-blue);
 }
-/* dropdown */
+/* dropdown menu*/
 /* angledown icon */
 .topmenu a,
-.topsubmenu > a{
+.topsubmenu > a,
+.drawer-topmenu{
     position: relative;
 }
 .topmenu > a:after,
-.topsubmenu > a:after{
+.topsubmenu > a:after,
+.drawer-topmenu:after{
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     font-size: 12px;
@@ -284,9 +286,23 @@ body{
     top: 50%;
     transform: translateY(-50%);
 }
-.topmenu > a:after{
+.topmenu > a:after {
     content: '\f107';
     right: -15px;
+}
+
+.drawer-topmenu:after {
+    content: '\f105';
+    color: var(--ss-light-gray);
+    right: 0;
+    top: 0;
+    transform: inherit;
+    transition: all 0.35s ease;
+}
+.drawer-topmenu.active:after {
+    right: 0;
+    top: 0;
+    transform: rotate(90deg);
 }
 .topsubmenu > a:after {
     content: '\f105';
@@ -348,7 +364,75 @@ body{
 .header-nav__brand-logo {
     flex: 0 0 auto;
 }
-
+/* mobile menu */
+.header-nav__bar {
+    cursor: pointer;
+    font-size: 20px;
+}
+.drawer-nav {
+    padding: 20px;
+    height: 100vh;
+    overflow-y: scroll;
+    width: 270px;
+    position: fixed;
+    top: 0;
+    transform: translateX(-270px);
+    transition: all 0.35s ease;
+}
+.drawer-nav.active {
+    transform: translateX(0px);
+}
+.drawer-nav__logo {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+.drawer-nav__logo a {
+    width: 176px;
+}
+.drawer-menu ul li a{
+    font-size: var(--ss-text-xs);
+    font-weight: 400;
+    color: var(--ss-dark-gray);
+    padding: 3px 0;
+    display: block;
+}
+.drawer-menu ul li > a:hover {
+    color: var(--ss-dark-blue);
+}
+.drawer-topmenu {
+    position: relative;
+}
+.mobile-angle-down {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    color: var(--ss-light-gray);
+    transition: all 0.35s ease;
+}
+.mobile-angle.active {
+    transform: rotate(90deg);
+}
+.drawer-topmenu ul {
+    display: none;
+    padding-left: 20px;
+}
+.drawer-nav .disease {
+    padding-left: 20px;
+}
+.drawer-nav .disease > a {
+    padding-left: 20px;
+}
+.menu-close {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--ss-light-gray-2);
+    border-radius: 3px;
+    cursor: pointer;
+}
 /* ============ banner css  =================================== */
 .banner {
     padding: 150px 0;
