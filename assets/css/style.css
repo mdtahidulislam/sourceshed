@@ -40,7 +40,8 @@ input, select,button:focus {
     --ss-dark: #000000;
     --ss-white: #ffffff;
     --ss-light-gray: #8e8e8e;
-    --ss-light-gray-2: #d8d8d8;
+    --ss-light-gray-2: #c4a7a7;
+    --ss-light-gray-3: #ddd;
     --ss-dark-gray: #7a7a7a;
     --ss-light-ash: #8EA0AD;
 
@@ -135,6 +136,9 @@ html, body{
 }
 .text-m {
     font-size: var(--ss-text-m);
+}
+.text-xs {
+    font-size: var(--ss-text-xs);
 }
 /* .text-xl{
     font-size: var(--l-text-xl);
@@ -587,4 +591,46 @@ body{
 .sourcebook-active .owl-nav .owl-next {
     right: 0;
     position: absolute;
+}
+/* ============ sourcebook inner page css  =================================== */
+/* main doc */
+.doc-main {
+    width: calc(100% - 330px);
+    flex: 0 0 calc(100% - 330px);
+    max-width: 100%;
+}
+.doc-main-left {
+    width: 100%;
+    max-width: 20%;
+    flex: 0 0 20%;
+}
+.doc-index ul li {
+    padding: 5px;
+    border-bottom: 1px solid var(--ss-light-gray-3);
+}
+.doc-dropdown ul li:last-child {
+    border-bottom: none;
+}
+.doc-index-item:hover {
+    color: var(--ss-dark-blue);
+}
+.doc-main-content {
+    width: 100%;
+    max-width: 80%;
+    flex: 0 0 80%;
+}
+/* doc sidebar */
+.doc-sidebar {
+    max-width: 330px;
+    flex: 0 0 330px;
+}
+/* ============ footer css  =================================== */
+.footer {
+    padding: 40px 0;
+}
+.footer-logo img {
+    max-width: 150px;
+}
+.copyright {
+    margin-top: 10px;
 }
