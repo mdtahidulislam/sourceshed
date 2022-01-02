@@ -11,7 +11,7 @@
 
 a{
     text-decoration: none;
-    display: inline-block;
+    display: block;
 }
 
 p {
@@ -607,6 +607,10 @@ body{
 .doc-index ul li {
     padding: 5px;
     border-bottom: 1px solid var(--ss-light-gray-3);
+    cursor: pointer;
+}
+.doc-dropdown ul {
+    display: none;
 }
 .doc-dropdown ul li:last-child {
     border-bottom: none;

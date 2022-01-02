@@ -21,7 +21,7 @@
     });
 
     /*================================
-        soutcebook tab carousel
+        sourcebook tab carousel
     =================================*/
     $(document).ready(function(){
         $(".sourcebook-active").owlCarousel({
@@ -42,4 +42,11 @@
             }
         });
       });
+    
+    /*================================
+        sourcebook inner page
+    =================================*/
+      $(".doc-dropdown").click(function(){
+        $(".doc-dropdown ul").toggle();
+    });
 })(jQuery);
