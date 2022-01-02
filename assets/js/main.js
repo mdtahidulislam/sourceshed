@@ -46,7 +46,22 @@
     /*================================
         sourcebook inner page
     =================================*/
-      $(".doc-dropdown").click(function(){
+    $(".doc-index ul li").each(function(index,item){
+        if ($(item).attr("class") === "doc-dropdown") {
+            $(".doc-dropdown > a").attr("href", "javascript:void(0)");
+        }
+        // var hrefVal = $(item).children("a.doc-index-item").attr("href");
+        // if (typeof(hrefVal) === "string") {
+        //     var itemId = hrefVal.substring(1);
+        //     $(item).click(function(){
+        //         $(`.doc-scrollspy #${itemId}`).css("padding-top", "100px");
+        //     });
+        // }
+    });
+    $(".doc-dropdown").click(function(){
         $(".doc-dropdown ul").toggle();
     });
+
+
+
 })(jQuery);

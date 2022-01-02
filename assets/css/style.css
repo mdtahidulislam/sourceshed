@@ -618,6 +618,19 @@ body{
 .doc-index-item:hover {
     color: var(--ss-dark-blue);
 }
+/* 
+* uses for sticky header 
+*/
+.doc-scrollspy > div {
+    position: relative;
+}
+.doc-scrollspy > div:before {
+    content: '';
+    display: block;
+    height: 100px;
+    margin-top: -100px;
+    visibility: hidden;
+}
 .doc-main-content {
     width: 100%;
     max-width: 80%;
@@ -638,3 +651,7 @@ body{
 .copyright {
     margin-top: 10px;
 }
+
+
+
+
