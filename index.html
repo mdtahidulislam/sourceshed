@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="header-nav light-gray-bg-4">
+        <div class="header-nav light-gray-bg-4 py-md-0 py-2">
             <div class="container">
                 <div class="header-nav__container d-flex flex-wrap align-items-center justify-content-between">
                     <div class="header-nav__bar d-md-none d-block">
@@ -469,11 +469,10 @@
                     <div class="sourcebook-tab">
                         <nav>
                             <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
-                              <button class="nav-link active text-uppercase" id="retina-tab" data-bs-toggle="tab" data-bs-target="#retina" type="button" role="tab" aria-controls="retina" aria-selected="true">Retina</button>
-                              <!-- <button class="nav-link text-uppercase" id="cataract-tab" data-bs-toggle="tab" data-bs-target="#cataract" type="button" role="tab" aria-controls="cataract" aria-selected="false">Cornea</button> -->
-                              <button class="nav-link text-uppercase" id="cornea-tab" data-bs-toggle="tab" data-bs-target="#cornea" type="button" role="tab" aria-controls="cornea" aria-selected="false">Cornea</button>
-                              <button class="nav-link text-uppercase" id="glucoma-tab" data-bs-toggle="tab" data-bs-target="#glucoma" type="button" role="tab" aria-controls="glucoma" aria-selected="false">Glaucoma</button>
-                              <button class="nav-link text-uppercase" id="pediatric-tab" data-bs-toggle="tab" data-bs-target="#pediatric" type="button" role="tab" aria-controls="pediatric" aria-selected="false">Pediatrics</button>
+                              <button class="nav-link active text-uppercase text-dark-blue font-bold" id="retina-tab" data-bs-toggle="tab" data-bs-target="#retina" type="button" role="tab" aria-controls="retina" aria-selected="true">Retina</button>
+                              <button class="nav-link text-uppercase text-dark-blue font-bold" id="cornea-tab" data-bs-toggle="tab" data-bs-target="#cornea" type="button" role="tab" aria-controls="cornea" aria-selected="false">Cornea</button>
+                              <button class="nav-link text-uppercase text-dark-blue font-bold" id="glucoma-tab" data-bs-toggle="tab" data-bs-target="#glucoma" type="button" role="tab" aria-controls="glucoma" aria-selected="false">Glaucoma</button>
+                              <button class="nav-link text-uppercase text-dark-blue font-bold" id="pediatric-tab" data-bs-toggle="tab" data-bs-target="#pediatric" type="button" role="tab" aria-controls="pediatric" aria-selected="false">Pediatrics</button>
                             </div>
                         </nav>
                         <div class="subtitle d-flex justify-content-between align-items-center mt-3">
@@ -563,15 +562,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="tab-pane fade" id="cataract" role="tabpanel" aria-labelledby="cataract-tab">
+                            <div class="tab-pane fade" id="cornea" role="tabpanel" aria-labelledby="cornea-tab">
                                 <div class="sourcebook-active owl-carousel">
                                     <div class="sourcecard-wrapper">
                                         <a href="#" class="d-block">
                                             <div class="card sourcebook-card">
-                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
+                                                <div class="card-img-box">
+                                                    <img src="./assets//img/dry-eye-fluorescein.png" class="card-img-top img-fluid" alt="dry-eye-fluorescein">
+                                                </div>
                                                 <div class="card-body">
-                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
-                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                  <h5 class="card-title text-dark-blue font-bold">Dry Eye Disease</h5>
+                                                  <p class="card-text text-light-gray">Latest research evidence. Cyclosporine 0.05%, Lifetegrast 5%, Loteprednol Etabonate 0.25%. Clinical trials: DREAM, OPUS studies.</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -579,10 +580,12 @@
                                     <div class="sourcecard-wrapper">
                                         <a href="#" class="d-block">
                                             <div class="card sourcebook-card">
-                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
+                                                <div class="card-img-box">
+                                                    <img src="./assets//img/bacterial-keratitis.png" class="card-img-top img-fluid" alt="bacterial-keratitis">
+                                                </div>
                                                 <div class="card-body">
-                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
-                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                  <h5 class="card-title text-dark-blue font-bold">Bacterial Keratitis</h5>
+                                                  <p class="card-text text-light-gray">Evidence based guidelines. Landmark clinical trial: SCUT</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -590,55 +593,104 @@
                                     <div class="sourcecard-wrapper">
                                         <a href="#" class="d-block">
                                             <div class="card sourcebook-card">
-                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
-                                                <div class="card-body">
-                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
-                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <div class="card-img-box">
+                                                    <img src="./assets//img/viral-keratitis-150x150.webp" class="card-img-top img-fluid" alt="viral-keratitis">
                                                 </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="sourcecard-wrapper">
-                                        <a href="#" class="d-block">
-                                            <div class="card sourcebook-card">
-                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
                                                 <div class="card-body">
-                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
-                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="sourcecard-wrapper">
-                                        <a href="#" class="d-block">
-                                            <div class="card sourcebook-card">
-                                                <img src="./assets//img/card-img.png" class="card-img-top img-fluid" alt="...">
-                                                <div class="card-body">
-                                                  <h5 class="card-title text-dark-blue font-bold">Card title</h5>
-                                                  <p class="card-text text-light-gray">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- <div class="tab-pane fade" id="cornea" role="tabpanel" aria-labelledby="cornea-tab">
-                                <div class="sourcebook-active owl-carousel">
-                                    <div class="sourcecard-wrapper">
-                                        <a href="#" class="d-block">
-                                            <div class="card sourcebook-card">
-                                                <img src="./assets//img/BRVO-1-1.jpg" class="card-img-top img-fluid" alt="BRVO">
-                                                <div class="card-body">
-                                                  <h5 class="card-title text-dark-blue font-bold">Branch Retinal Vein Occlusion</h5>
-                                                  <p class="card-text text-light-gray">Evidence based guidelines. Clinical trials: BVOS, SCORE, BRAVO.</p>
+                                                  <h5 class="card-title text-dark-blue font-bold">Herpes Simplex Keratitis</h5>
+                                                  <p class="card-text text-light-gray">Evidence based guidelines. Landmark clinical trials: HEDS I and HEDS II.</p>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="glucoma" role="tabpanel" aria-labelledby="glucoma-tab">...</div>
-                            <div class="tab-pane fade" id="pediatric" role="tabpanel" aria-labelledby="pediatric-tab">...</div> -->
+                            <div class="tab-pane fade" id="glucoma" role="tabpanel" aria-labelledby="glucoma-tab">
+                                <div class="sourcebook-active owl-carousel">
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <div class="card-img-box">
+                                                    <img src="./assets//img/HVF-glaucoma-defect-150x150.webp" class="card-img-top img-fluid" alt="HVF-glaucoma-defect">
+                                                </div>
+                                                <div class="card-body">
+                                                <h5 class="card-title text-dark-blue font-bold">Primary Open Angle Glaucoma</h5>
+                                                <p class="card-text text-light-gray">Treatment modalities. Clinical trials: OHTS, EMGTS, CIGTS, AGIS.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <div class="card-img-box">
+                                                    <img src="./assets//img/Picture1-150x150.webp" class="card-img-top img-fluid" alt="Normal Tension Glaucoma">
+                                                </div>
+                                                <div class="card-body">
+                                                <h5 class="card-title text-dark-blue font-bold">Normal Tension Glaucoma</h5>
+                                                <p class="card-text text-light-gray">Evidence based guidelines. Clinical trials: CNTGS, LGTS.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <div class="card-img-box">
+                                                    <img src="./assets//img/istent-150x150.webp" class="card-img-top img-fluid" alt="HVF-glaucoma-defect">
+                                                </div>
+                                                <div class="card-body">
+                                                <h5 class="card-title text-dark-blue font-bold">Microinvasive Glaucoma Surgery</h5>
+                                                <p class="card-text text-light-gray">Latest research evidence. Hydrus, iStent, XEN, Preserflo. Clinical trials: COMPARE, HORIZON.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pediatric" role="tabpanel" aria-labelledby="pediatric-tab">
+                                <div class="sourcebook-active owl-carousel">
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <div class="card-img-box">
+                                                    <img src="./assets//img/pediatric-snellen-chart-2-150x150.webp" class="card-img-top img-fluid" alt="HVF-glaucoma-defect">
+                                                </div>
+                                                <div class="card-body">
+                                                <h5 class="card-title text-dark-blue font-bold">Amblyopia</h5>
+                                                <p class="card-text text-light-gray">Evidence based guidelines in binocular treatment, amblyopia, patching. PEDIG studies.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <div class="card-img-box">
+                                                    <img src="./assets//img/congenital-cat-150x150.webp" class="card-img-top img-fluid" alt="Congenital Cataract">
+                                                </div>
+                                                <div class="card-body">
+                                                <h5 class="card-title text-dark-blue font-bold">Congenital Cataract</h5>
+                                                <p class="card-text text-light-gray">Evidence based guidelines. Clinical trials: IATS, TAPS.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sourcecard-wrapper">
+                                        <a href="#" class="d-block">
+                                            <div class="card sourcebook-card">
+                                                <div class="card-img-box">
+                                                    <img src="./assets//img/esotropia-kid-in-glasses-150x150.webp" class="card-img-top img-fluid" alt="Infantile Esotropia">
+                                                </div>
+                                                <div class="card-body">
+                                                <h5 class="card-title text-dark-blue font-bold">Infantile Esotropia</h5>
+                                                <p class="card-text text-light-gray">Evidence based guidelines. Clinical trials: CEOS, ELISS.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -646,7 +698,7 @@
         </div>
     </section><!-- end source book -->
     <!-- start source archive -->
-    <section class="sourcebook">
+    <section class="sourcebook py-0">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
