@@ -422,6 +422,12 @@ ul.submenu li:hover {
     border-radius: 5px;
     background: var(--ss-light-gray-2); 
 }
+.submenu li > p {
+    font-weight: 600;
+}
+.topsubmenu > ul.submenu {
+    min-width: 278px;
+}
 .header-nav__menu p {
     margin: 0;
     font-size: var(--ss-text-xs);
@@ -442,6 +448,9 @@ ul.submenu li:hover {
 }
 .header-nav__menu .disease a:hover{
     /* color: var(--ss-light-blue); */
+}
+.header-nav__menu .disease > a {
+    font-size: 13px !important;
 }
 .header-nav__brand-logo {
     flex: 0 0 auto;
