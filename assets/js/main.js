@@ -57,6 +57,9 @@
             $(".doc-dropdown > a").attr("href", "javascript:void(0)");
         }
     });
+    $(".doc-index ul li").click(function(){
+        $(this).addClass("active").siblings().removeClass('active');
+    });
     $(".doc-dropdown > a").click(function(){
         $(".doc-dropdown ul").toggleClass("active");
         // $(".doc-dropdown ul li").click(function(){
