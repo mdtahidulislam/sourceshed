@@ -47,10 +47,14 @@ input, select,button:focus {
     --ss-dark-gray: #7a7a7a;
     --ss-light-ash: #8EA0AD;
     --ss-light-ash-1: #CAD1DA;
+    --ss-light-ash-2: #D1DBE9;
 
     --ss-dark-blue: #011E36;
     --ss-light-blue: #3366ff;
     --ss-light-blue-2: #66ADCC;
+    --ss-light-blue-3: #d9edf7;
+
+    --ss-green: #339966;
 
     --ss-text-xss: 12px;
     --ss-text-xs: 14px;
@@ -58,7 +62,7 @@ input, select,button:focus {
     --ss-text-m: 18px;
     --ss-text-xl: 20px;
     --ss-text-xll: 24px;
-    --ss-text-xll: 34px
+    --ss-text-xlll: 34px
 
 }
 
@@ -92,11 +96,17 @@ html, body{
 .dark-blue-bg {
     background-color: var(--ss-dark-blue);
 }
+.light-blue-bg-3 {
+    background-color: var(--ss-light-blue-3);
+}
 .light-ash-bg{
     background-color: var(--ss-light-ash)
 }
 .light-ash-bg-1{
     background-color: var(--ss-light-ash-1)
+}
+.light-ash-bg-2{
+    background-color: var(--ss-light-ash-2)
 }
 /* -------- text color -------- */
 .text-white{
@@ -110,6 +120,9 @@ html, body{
 }
 .text-dark-blue {
     color: var(--ss-dark-blue);
+}
+.text-green {
+    color: var(--ss-green);
 }
 /* ----------- text underline---- */
 .text-underline {
@@ -144,17 +157,26 @@ html, body{
     opacity: 0.9;
 }
 /* -------- font size */
-.text-xll {
-    font-size: var(--ss-text-xll);
-}
-.text-m {
-    font-size: var(--ss-text-m);
+.text-s {
+    font-size: var(--ss-text-s);
 }
 .text-xs {
     font-size: var(--ss-text-xs);
 }
 .text-xss {
     font-size: var(--ss-text-xss);
+}
+.text-m {
+    font-size: var(--ss-text-m);
+}
+.text-xl {
+    font-size: var(--ss-text-xl);
+}
+.text-xll {
+    font-size: var(--ss-text-xll);
+}
+.text-xlll {
+    font-size: var(--ss-text-xlll);
 }
 /* .text-xl{
     font-size: var(--l-text-xl);
@@ -721,7 +743,8 @@ ul.submenu li:hover {
     cursor: pointer;
     position: relative;
 }
-.doc-index ul li a {
+.doc-index ul li a,
+.doc-sidebar-list-item a {
     font-size: 15px;
 }
 .doc-index ul li a:hover {
@@ -731,7 +754,13 @@ ul.submenu li:hover {
     color: var(--ss-dark-blue);
 }
 .doc-dropdown ul {
-    /* display: none; */
+    display: none;
+}
+/**
+* active class added by js
+*/
+.doc-dropdown ul.active {
+    display: block;
 }
 .doc-dropdown ul li:last-child {
     border-bottom: none;
@@ -774,9 +803,9 @@ ul.submenu li:hover {
     flex: 0 0 20%;
     max-width: 20%;
 }
-.doc-widget-col-1 strong {
+/* .doc-widget-col-1 strong {
     color: #339966;
-}
+} */
 .doc-widget-col-2 {
     flex: 1;
     border-left: 2px solid var(--ss-light-gray-3);
@@ -802,7 +831,7 @@ ul.submenu li:hover {
     content: "\f0d7";
     font-family: 'FontAwesome';
     font-weight: 900;
-    color: var(--ss-light-gray);
+    color: var(--ss-dark-blue);
     position: absolute;
     transition: transform 0.35s ease;
 }
@@ -811,6 +840,25 @@ ul.submenu li:hover {
 }
 .doc-detail-btn .accordion-body ul {
     list-style-type: disc;
+}
+.doc-detail .accordion-body ul {
+    list-style-type: disc;
+}
+.doc-detail .accordion-body ul li ul {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+.doc-detail-table {
+    width: 100%;
+}
+.doc-detail-table thead th {
+    background: var(--ss-light-blue-3);
+    font-size: var(--ss-text-xss);
+    padding: 8px;
+}
+.doc-detail-table tbody td {
+    font-size: var(--ss-text-xss);
+    padding: 8px;
 }
 
 /* make clickable */
@@ -830,6 +878,21 @@ ul.submenu li:hover {
 .doc-sidebar {
     max-width: 330px;
     flex: 0 0 330px;
+    margin-top: 60px;
+}
+.doc-sidebar-wrapper {
+    padding: 10px;
+}
+.doc-sidebar-list {
+    border-bottom: 1px solid var(--ss-light-gray-3);
+    padding: 5px 0;
+}
+.doc-sidebar-list:last-child{
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.doc-sidebar-list-item a:hover {
+    color: var(--ss-dark-blue);
 }
 /* ============ footer css  =================================== */
 .footer {

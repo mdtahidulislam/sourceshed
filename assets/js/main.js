@@ -57,9 +57,12 @@
             $(".doc-dropdown > a").attr("href", "javascript:void(0)");
         }
     });
-    // $(".doc-dropdown").click(function(){
-    //     $(".doc-dropdown ul").toggle();
-    // });
+    $(".doc-dropdown > a").click(function(){
+        $(".doc-dropdown ul").toggleClass("active");
+        // $(".doc-dropdown ul li").click(function(){
+        //     $(this).parent().addClass("active");
+        // });
+    });
     /** 
      * add active class to doc index
     */
