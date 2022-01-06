@@ -796,14 +796,22 @@ ul.submenu li:hover {
 /* .doc-dropdown ul li:nth-child(1) {
     padding-left: 7px;
 } */
-.doc-dropdown ul li:nth-child(2) {
+.doc-dropdown ul li:nth-child(2),
+.doc-dropdown ul li:nth-child(14),
+.doc-dropdown ul li:nth-child(4),
+.doc-dropdown ul li:nth-child(9),
+.doc-dropdown ul li:nth-child(11) {
     padding-left: 14px;
 }
-.doc-dropdown ul li:nth-child(4) {
-    padding-left: 14px;
-}
-.doc-dropdown ul li:nth-child(5) {
+.doc-dropdown ul li:nth-child(5),
+.doc-dropdown ul li:nth-child(8),
+.doc-dropdown ul li:nth-child(10),
+.doc-dropdown ul li:nth-child(12){
     padding-left: 21px;
+}
+.doc-dropdown ul li:nth-child(6),
+.doc-dropdown ul li:nth-child(7) {
+    padding-left: 28px;
 }
 .doc-dropdown ul li a {
     font-size: var(--ss-text-xs);
@@ -910,7 +918,12 @@ ul.submenu li:hover {
     font-size: var(--ss-text-xss);
     padding: 8px;
 }
-
+.doc-detail-table tbody tr {
+    border-bottom: 1px solid var(--ss-light-gray-3);
+}
+.doc-detail-table tbody tr:last-child {
+    border-bottom: none;
+}
 /* make clickable */
 .doc-widget-text a,
 .doc-widget-link a,
