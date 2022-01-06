@@ -747,14 +747,14 @@ ul.submenu li:hover {
 /* ============ sourcebook inner page css  =================================== */
 /* main doc */
 .doc-main {
-    width: calc(100% - 330px);
-    flex: 0 0 calc(100% - 330px);
+    width: calc(100% - 280px);
+    flex: 0 0 calc(100% - 280px);
     max-width: 100%;
 }
 .doc-main-left {
     width: 100%;
-    max-width: 20%;
-    flex: 0 0 20%;
+    max-width: 23%;
+    flex: 0 0 23%;
 }
 .doc-main-tab {
     position: sticky;
@@ -839,8 +839,8 @@ ul.submenu li:hover {
 }
 .doc-main-content {
     width: 100%;
-    max-width: 80%;
-    flex: 0 0 80%;
+    max-width: 77%;
+    flex: 0 0 77%;
 }
 .doc-widget-col {
     padding: 10px;
@@ -922,8 +922,8 @@ ul.submenu li:hover {
 }
 /* doc sidebar */
 .doc-sidebar {
-    max-width: 330px;
-    flex: 0 0 330px;
+    max-width: 280px;
+    flex: 0 0 280px;
     margin-top: 60px;
 }
 .doc-sidebar-wrapper {
@@ -940,6 +940,14 @@ ul.submenu li:hover {
 .doc-sidebar-list-item a:hover {
     color: var(--ss-dark-blue);
 }
+@media (max-width: 768px) {
+    .main-wrapper-row {
+        flex-direction: column;
+    }
+    .doc-main {
+        width: 100%;
+    }
+}
 /* ============ footer css  =================================== */
 .footer {
     padding: 40px 0;
@@ -953,4 +961,27 @@ ul.submenu li:hover {
 
 
 
+
+
+#doc-item-2 .title {
+    position: relative;
+    cursor: pointer;
+}
+#doc-item-2 {
+    position: relative;
+    z-index: 9;
+}
+.title:after {content: '\f0d7';font-family: 'FontAwesome';position: absolute;right: 10px;}
+.collapsible {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.collapsible.active {
+    height: inherit;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.35s ease;
+}
 

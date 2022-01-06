@@ -52,11 +52,11 @@
     /*================================
         sourcebook inner page
     =================================*/
-    $(".doc-index ul li").each(function(index,item){
-        if ($(item).attr("class") === "doc-dropdown") {
-            $(".doc-dropdown > a").attr("href", "javascript:void(0)");
-        }
-    });
+    // $(".doc-index ul li").each(function(index,item){
+    //     if ($(item).attr("class") === "doc-dropdown") {
+    //         $(".doc-dropdown > a").attr("href", "javascript:void(0)");
+    //     }
+    // });
     $(".doc-index ul li").click(function(){
         $(this).addClass("active").siblings().removeClass('active');
     });
@@ -75,7 +75,29 @@
     $(".doc-detail-btn").click(function(){
         $(this).toggleClass("active");
     });
-
+    $(".doc-index ul li a").each(function(index,item){
+        console.log($(item).attr("href"));
+        $(item).click(function(){
+            var hrefVal = $(item).attr("href").substring(1);
+            console.log(hrefVal);
+            // if (hrefVal.includes("#", 0)) {
+            //     var divId = hrefVal.substring(1);
+            //     if(divId === $(".doc-scrollspy > div").attr("id")){
+            //         console.log("yes");
+            //     } else{
+            //         console.log("no");
+            //     };
+            // }
+            $(".doc-scrollspy > div").each(function(index, item){
+                //console.log($(item).attr("id"));
+                var divId = $(item).attr("id");
+                //console.log("id-",divId);
+                if(hrefVal === divId){
+                    console.log("yes");
+                }
+            });
+        });
+    });
 
 
 })(jQuery);
