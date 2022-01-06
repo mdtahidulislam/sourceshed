@@ -75,8 +75,8 @@
     $(".doc-detail-btn").click(function(){
         $(this).toggleClass("active");
     });
-    $(".doc-index ul li a").each(function(index,item){
-        console.log($(item).attr("href"));
+    $(".doc-index > ul > li > a").each(function(index,item){
+        //console.log($(item).attr("href"));
         $(item).click(function(){
             var hrefVal = $(item).attr("href").substring(1);
             console.log(hrefVal);
@@ -88,14 +88,21 @@
             //         console.log("no");
             //     };
             // }
-            $(".doc-scrollspy > div").each(function(index, item){
-                //console.log($(item).attr("id"));
-                var divId = $(item).attr("id");
-                //console.log("id-",divId);
-                if(hrefVal === divId){
-                    console.log("yes");
-                }
-            });
+            // $(".doc-scrollspy > div").each(function(index, item){
+            //     //console.log($(item).attr("id"));
+            //     var divId = $(item).attr("id");
+            //     //console.log("id-",divId);
+            //     if(hrefVal === divId){
+            //         console.log("yes");
+            //         $(item).scrollTop("100px");
+            //     }
+            // });
+            //$(`#${hrefVal}`).scrollTop(200);
+            $(`#${hrefVal}`).addClass("active").siblings().removeClass('active').scrollTop(100);
+        });
+        var hrefVal = $(item).attr("href").substring(1);
+        $(`#${hrefVal}`).click(function(){
+            $(this).toggleClass("active");
         });
     });
 

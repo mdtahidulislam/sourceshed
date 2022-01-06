@@ -830,13 +830,13 @@ ul.submenu li:hover {
 .doc-scrollspy > div {
     position: relative;
 }
-.doc-scrollspy > div:before {
+/* .doc-scrollspy > div:before {
     content: '';
     display: block;
     height: 100px;
     margin-top: -100px;
     visibility: hidden;
-}
+} */
 .doc-main-content {
     width: 100%;
     max-width: 77%;
@@ -963,25 +963,30 @@ ul.submenu li:hover {
 
 
 
-#doc-item-2 .title {
+
+/* .title:after {content: '\f0d7';font-family: 'FontAwesome';position: absolute;right: 10px;} */
+.collapsible {
+    display: none;
+}
+
+.doc-content.active .collapsible {
+    display: block;
+}
+
+.doc-content-title {
     position: relative;
     cursor: pointer;
 }
-#doc-item-2 {
-    position: relative;
-    z-index: 9;
-}
-.title:after {content: '\f0d7';font-family: 'FontAwesome';position: absolute;right: 10px;}
-.collapsible {
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.collapsible.active {
-    height: inherit;
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.35s ease;
-}
-
+/* .doc-content-title:after {
+    content: '\f107';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--ss-dark-blue);
+} */
+/* .doc-content-title:first-child:after {
+    content: '';
+} */
