@@ -957,12 +957,30 @@ ul.submenu li:hover {
 .doc-sidebar-list-item a:hover {
     color: var(--ss-dark-blue);
 }
+@media (max-width: 1024px) {
+    .doc-body {
+        flex-direction: column;
+    }
+    .doc-body > div {
+        max-width: 100%;
+    }
+}
 @media (max-width: 768px) {
-    .main-wrapper-row {
+    .main-wrapper-row,
+    .doc-widget {
         flex-direction: column;
     }
     .doc-main {
         width: 100%;
+    }
+    .doc-widget > div {
+        max-width: 100%;
+    }
+    .doc-widget-col-2 {
+        border-top: 2px solid var(--ss-light-gray-3);
+    }
+    .doc-widget-col-3 {
+        border-left: 2px solid var(--ss-light-gray-3);
     }
 }
 /* ============ footer css  =================================== */
