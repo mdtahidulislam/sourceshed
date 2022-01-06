@@ -52,26 +52,17 @@
     /*================================
         sourcebook inner page
     =================================*/
-    // $(".doc-index ul li").each(function(index,item){
-    //     if ($(item).attr("class") === "doc-dropdown") {
-    //         $(".doc-dropdown > a").attr("href", "javascript:void(0)");
-    //     }
-    // });
+    // add active class on left panel item when clicked on
     $(".doc-index ul li").click(function(){
         $(this).addClass("active").siblings().removeClass('active');
     });
+    // left panel dropdown
     $(".doc-dropdown > a").click(function(){
         $(".doc-dropdown ul").toggleClass("active");
-        // $(".doc-dropdown ul li").click(function(){
-        //     $(this).parent().addClass("active");
-        // });
     });
     /** 
      * add active class to doc index
     */
-    // $(".doc-index ul li").click(function(){
-    //     $(this).addClass("active").siblings().removeClass('active');
-    // });
     $(".doc-detail-btn").click(function(){
         $(this).toggleClass("active");
     });
@@ -89,27 +80,43 @@
             $(`#${hrefVal}`).addClass("active").siblings().removeClass('active');
         });
         /**
-         * collapse right doc by clicking it
+         * toggle right doc by clicking it
         */
         $(`#${hrefVal}`).children(".doc-content-title").click(function(){
+            // toggle current doc
             $(`#${hrefVal}`).children(".doc-content-title").parent().toggleClass("active");
-            $(`#${hrefVal}`).children(".collapsible").toggleClass("active");
+            // close others openeddoc
+            $(`#${hrefVal}`).siblings().removeClass("active");
+            // add active class on left panel
+            var divId = $(`#${hrefVal}`).attr("id");
+            //console.log(divId);
+            if(hrefVal === divId){
+                $(item).parent().toggleClass("active").siblings().removeClass("active");
+            };
             
         });
         /**
          * close other opend right doc
         */
-        $(`#${hrefVal}`).click(function(){
-            $(this).siblings().removeClass("active");
-            // toggle active class on left panel
-            var divId = $(`#${hrefVal}`).attr("id");
-            //console.log(divId);
-            if(hrefVal === divId){
-                $(item).parent().toggleClass("active").siblings().removeClass("active");
-                
-            };
+        // $(`#${hrefVal}`).click(function(){
+        //     //$(this).siblings().removeClass("active");
+        //     // toggle active class on left panel
+        //     var divId = $(`#${hrefVal}`).attr("id");
+        //     //console.log(divId);
+        //     if(hrefVal === divId){
+        //         $(item).parent().toggleClass("active").siblings().removeClass("active");
+        //     };
+        // });
+    });
+
+    // open all doc when clik on reference
+    $(".ref-no").each(function(index,item){
+        //console.log($(this).attr("href"));
+        $(this).click(function(){
+            $(".doc-content").each(function(index, item){
+                $(this).addClass("active");
+            });
         });
-        
     });
 
 
