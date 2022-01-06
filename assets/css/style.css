@@ -55,6 +55,7 @@ input, select,button:focus {
     --ss-light-blue-3: #d9edf7;
 
     --ss-green: #339966;
+    --ss-brown: #993300;
 
     --ss-text-xss: 12px;
     --ss-text-xs: 14px;
@@ -123,6 +124,9 @@ html, body{
 }
 .text-green {
     color: var(--ss-green);
+}
+.text-brown {
+    color: var(--ss-brown);
 }
 /* ----------- text underline---- */
 .text-underline {
