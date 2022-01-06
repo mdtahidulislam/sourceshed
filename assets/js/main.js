@@ -76,34 +76,40 @@
         $(this).toggleClass("active");
     });
     $(".doc-index > ul > li > a").each(function(index,item){
-        //console.log($(item).attr("href"));
-        $(item).click(function(){
-            var hrefVal = $(item).attr("href").substring(1);
-            console.log(hrefVal);
-            // if (hrefVal.includes("#", 0)) {
-            //     var divId = hrefVal.substring(1);
-            //     if(divId === $(".doc-scrollspy > div").attr("id")){
-            //         console.log("yes");
-            //     } else{
-            //         console.log("no");
-            //     };
-            // }
-            // $(".doc-scrollspy > div").each(function(index, item){
-            //     //console.log($(item).attr("id"));
-            //     var divId = $(item).attr("id");
-            //     //console.log("id-",divId);
-            //     if(hrefVal === divId){
-            //         console.log("yes");
-            //         $(item).scrollTop("100px");
-            //     }
-            // });
-            //$(`#${hrefVal}`).scrollTop(200);
-            $(`#${hrefVal}`).addClass("active").siblings().removeClass('active').scrollTop(100);
-        });
+        //console.log($(item));
+        //console.log($(index)[0]);
+        // get each left panelhref val
         var hrefVal = $(item).attr("href").substring(1);
-        $(`#${hrefVal}`).click(function(){
-            $(this).toggleClass("active");
+
+        /**
+         * open current right doc by clicking left panel and
+         * close all opened right doc and
+        */
+        $(item).click(function(){
+            $(`#${hrefVal}`).addClass("active").siblings().removeClass('active');
         });
+        /**
+         * collapse right doc by clicking it
+        */
+        $(`#${hrefVal}`).children(".doc-content-title").click(function(){
+            $(`#${hrefVal}`).children(".doc-content-title").parent().toggleClass("active");
+            $(`#${hrefVal}`).children(".collapsible").toggleClass("active");
+            
+        });
+        /**
+         * close other opend right doc
+        */
+        $(`#${hrefVal}`).click(function(){
+            $(this).siblings().removeClass("active");
+            // toggle active class on left panel
+            var divId = $(`#${hrefVal}`).attr("id");
+            //console.log(divId);
+            if(hrefVal === divId){
+                $(item).parent().toggleClass("active").siblings().removeClass("active");
+                
+            };
+        });
+        
     });
 
 

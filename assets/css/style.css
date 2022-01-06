@@ -967,10 +967,18 @@ ul.submenu li:hover {
 /* .title:after {content: '\f0d7';font-family: 'FontAwesome';position: absolute;right: 10px;} */
 .collapsible {
     display: none;
+    /* transition: all 0.35s ease; */
 }
 
+/* .doc-content.active .collapsible {
+    display: block;
+} */
 .doc-content.active .collapsible {
     display: block;
+}
+.doc-content.active i {
+    transform: rotate(-180deg);
+    /* transition: transform 0.35s ease; */
 }
 
 .doc-content-title {
