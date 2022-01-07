@@ -36,7 +36,32 @@
                 0: {
                     items: 1,
                 },
-                425: {
+                600: {
+                    items: 2,
+                },
+                768: {
+                    items: 3,
+                },
+                1024: {
+                    items: 5,
+                }
+            }
+        });
+      });
+    /*================================
+        studies tab carousel
+    =================================*/
+    $(document).ready(function(){
+        $(".studies-active").owlCarousel({
+            margin: 15,
+            dots: false,
+            loop: true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
                     items: 2,
                 },
                 768: {
@@ -116,6 +141,26 @@
             $(".doc-content").each(function(index, item){
                 $(this).addClass("active");
             });
+        });
+    });
+    /**
+     * change subtitle by ckicking tab
+    */
+    $(".sourcebook-tab button").each(function(index, item){
+        $(this).click(function(){
+            var tabId = $(this).attr("id");
+            $(".subtitle-wrapper h2").each(function(index, item){
+                var subtitleAttr = $(this).attr("subtitle-labelledby");
+                if (tabId === subtitleAttr) {
+                    $(this).addClass("active").siblings().removeClass("active");
+                }
+            });
+        });
+    });
+    $(".studies-tab button").each(function(index, item){
+        $(this).click(function(){
+            var tabTitle = $(this).text();
+            $(".studies-tab .subtitle-wrapper h2").text(tabTitle);
         });
     });
 

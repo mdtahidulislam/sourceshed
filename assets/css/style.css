@@ -600,7 +600,8 @@ ul.submenu li:hover {
     padding: 50px 0;
 }
 /* sourcebook tab */
-.sourcebook-tab .nav-link {
+.sourcebook-tab .nav-link,
+.studies-tab .nav-link {
     font-size: 15px;
     padding: 8px 15px;
     margin-bottom: 0px;
@@ -611,7 +612,8 @@ ul.submenu li:hover {
     transition: all 0.35s ease;
     position: relative;
 }
-.sourcebook-tab .nav-link::before {
+.sourcebook-tab .nav-link::before, 
+.studies-tab .nav-link::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -625,7 +627,8 @@ ul.submenu li:hover {
     transform-origin: 0 50%;
     transition: transform 0.2s ease;
 }
-.sourcebook-tab .nav-link.active::before{
+.sourcebook-tab .nav-link.active::before,
+.studies-tab .nav-link.active::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -641,8 +644,25 @@ ul.submenu li:hover {
 /* .sourcebook-tab .nav-link:first-child:before{
     background: transparent;
 } */
-.sourcebook-tab .nav-link.active {
+.sourcebook-tab .nav-link.active, 
+.studies-tab .nav-link.active {
     background: var(--ss-light-gray-4);
+}
+.subtitle-wrapper h2 {
+    display: none;
+}
+.subtitle-wrapper h2.active{
+    display: block;
+}
+.tab-viewall {
+    background: var(--ss-dark-blue);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+.tab-viewall:hover {
+    color: #fff;
 }
 
 /* .sourcebook-tab .nav-link.active::before{
@@ -659,19 +679,22 @@ ul.submenu li:hover {
     background: transparent;
 } */
 @media (max-width: 990px) {
-    .sourcebook-tab .nav {
+    .sourcebook-tab .nav, 
+    .studies-tab .nav {
         flex-wrap: nowrap;
         overflow: auto;
     }
 }
 /* sourcebook carousel */
-.sourcebook-active {
+.sourcebook-active,
+.studies-active {
     padding: 20px 0 0;
 }
 .sourcecard-wrapper {
     padding: 7px 0 0;
     max-width: 266px;
     width: 100%;
+    overflow: hidden;
 }
 .sourcebook-card {
     overflow: hidden;
@@ -681,6 +704,9 @@ ul.submenu li:hover {
     min-height: 245px;
     display: flex;
 }
+.studies-active .card-img-box {
+    min-height: 245px;
+}
 .card-img-box img {
     object-fit: cover;
 }
@@ -689,15 +715,22 @@ ul.submenu li:hover {
     /* font-size: 1rem !important; */
     max-height: 73.22px;
 }
+.sourcebook-card .card-title a {
+    color: var(--ss-dark-blue);
+}
+.sourcebook-card .card-title a:hover {
+    color: var(--ss-dark-blue);
+}
 .sourcebook-card .card-text {
     /* min-height: 144px; */
     min-height: 96px;
     font-size: 15px;
 }
-.sourcecard-wrapper a {
+.sourcecard-wrapper {
+    cursor: pointer;
     transition: all 0.45s ease;
 }
-.sourcecard-wrapper a:hover {
+.sourcecard-wrapper:hover {
     /* transform: translateY(-7px); */
     margin-top: -7px;
     transition: all 0.45s ease;
@@ -707,19 +740,20 @@ ul.submenu li:hover {
     object-fit: cover;
     transition: all 0.35s ease;
 } */
-.sourcecard-wrapper a:hover img {
+.sourcecard-wrapper:hover img {
     transform: scale(1.03);
     transition: all 0.45s ease;
 }
-.sourcecard-wrapper a:hover .card-body {
+.sourcecard-wrapper:hover .card-body {
     /* transform: translateY(7px); */
-    transition: all 0.35s ease;
+    /* transition: all 0.35s ease; */
 }
 .sourcebook-card .card-body {
     min-height: 208px;
 }
 /* sourcebook carosel btn */
-.sourcebook-active .owl-nav {
+.sourcebook-active .owl-nav,
+.studies-active .owl-nav {
     display: block !important;
     position: absolute;
     top: 50%;
@@ -727,7 +761,8 @@ ul.submenu li:hover {
     width: 100%;
     z-index: 9999;
 }
-.sourcebook-active .owl-nav button {
+.sourcebook-active .owl-nav button,
+.studies-active .owl-nav button {
     /* border: 2px solid var(--ss-light-ash) !important; */
     /* border: 0.0625rem solid #d8d9db !important; */
     border: 0.0625rem solid var(--ss-light-gray-2) !important;
@@ -740,22 +775,67 @@ ul.submenu li:hover {
     align-items: center;
     box-shadow: 0 0.125rem 0.5rem hsl(0deg 0% 60% / 40%);
 }
-.sourcebook-active .owl-nav button:hover {
+.sourcebook-active .owl-nav button:hover,
+.studies-active .owl-nav button:hover {
     border-color: var(--ss-dark-blue) !important;
 }
-.sourcebook-active .owl-nav button span {
+.sourcebook-active .owl-nav button span,
+.studies-active .owl-nav button span {
     color: var(--ss-dark-blue);
     font-size: 23px;
     vertical-align: middle;
     font-weight: 600;
 }
-.sourcebook-active .owl-nav .owl-prev {
+.sourcebook-active .owl-nav .owl-prev,
+.studies-active .owl-nav .owl-prev {
     left: -20px;
     position: absolute;
 }
-.sourcebook-active .owl-nav .owl-next {
+.sourcebook-active .owl-nav .owl-next,
+.studies-active .owl-nav .owl-next {
     right: -20px;
     position: absolute;
+}
+@media (max-width: 600px) {
+    .subtitle-wrapper h2 {
+        font-size: 18px;
+    }
+    .tab-viewall {
+        font-size: 14px;
+        width: 90px;
+    }
+    .sourcecard-wrapper {
+        max-width: 100%;
+    }
+    .sourcebook-active .owl-nav,
+    .studies-active .owl-nav {
+        position: inherit;
+        transform: none;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .sourcebook-active .owl-nav button,
+    .studies-active .owl-nav button {
+        margin: 0 5px;
+        width: 35px;
+        height: 35px;
+    }
+    .sourcebook-active .owl-nav .owl-prev,
+    .sourcebook-active .owl-nav .owl-next,
+    .studies-active .owl-nav .owl-prev,
+    .studies-active .owl-nav .owl-next {
+        position: inherit;
+    }
+    .sourcebook-active .owl-nav .owl-prev,
+    .studies-active .owl-nav .owl-prev {
+        left: auto;
+    }
+    .sourcebook-active .owl-nav .owl-next,
+    .studies-active .owl-nav .owl-next {
+        right: auto;
+    }
 }
 /* ============ sourcebook inner page css  =================================== */
 /* main doc */
