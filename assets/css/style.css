@@ -679,8 +679,7 @@ ul.submenu li:hover {
     background: transparent;
 } */
 @media (max-width: 990px) {
-    .sourcebook-tab .nav, 
-    .studies-tab .nav {
+    .sourcebook-tab .nav {
         flex-wrap: nowrap;
         overflow: auto;
     }
@@ -1117,4 +1116,46 @@ aside.archive-sidebar {
 
 
 
+
+.studies-tab nav {
+    /* min-height: 42px; */
+    position: relative;
+}
+
+.studies-tab .nav {
+    
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+.studies-tab .nav-link {
+    margin-bottom: 3px;
+}
+
+.tab-scroll-btn span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.tab-scroll-btn span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--ss-dark-blue);
+    cursor: pointer;
+}
+.scroll-next {
+    right: -20px;
+}
+
+.scroll-prev {
+    left: -20px;
+}
+
+.studies-tab button {
+    position: relative;
+}
 

@@ -164,5 +164,26 @@
         });
     });
 
+    
+        var $item = $('.studies-tab button'), //Cache your DOM selector
+        visible = 1, //Set the number of items that will be visible
+        index = 0, //Starting index
+        endIndex = ( $item.length / visible ) - 1;
+    $(".scroll-next").click(function(){
+        if(index < endIndex ){
+            index++;
+            $item.animate({'left':'-=200px'});
+        }
+    });
+    $(".scroll-prev").click(function(){
+        if(index > 0 ){
+            index--;
+            $item.animate({'left':'+=200px'});
+        }
+    });
+    // $(".tab-scroll-btn").click(function(e, delta){
+    //     $(".studies-tab button").scrollLeft -= (delta * 40);
+    //     e.preventDefault();
+    // });
 
 })(jQuery);
