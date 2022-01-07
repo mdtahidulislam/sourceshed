@@ -603,7 +603,6 @@ ul.submenu li:hover {
 .sourcebook-tab .nav-link,
 .studies-tab .nav-link {
     font-size: 15px;
-    padding: 8px 15px;
     margin-bottom: 0px;
     border: none;
     border-radius: 0px;
@@ -611,6 +610,12 @@ ul.submenu li:hover {
     white-space: nowrap;
     transition: all 0.35s ease;
     position: relative;
+}
+.sourcebook-tab .nav-link {
+    padding: 8px 30px;
+}
+.studies-tab .nav-link {
+    padding: 8px 15px;
 }
 .sourcebook-tab .nav-link::before, 
 .studies-tab .nav-link::before {
@@ -700,7 +705,7 @@ ul.submenu li:hover {
 }
 .sourcebook-active .card-img-box {
     overflow: hidden;
-    min-height: 245px;
+    height: 245px;
     display: flex;
 }
 .studies-active .card-img-box {
@@ -713,10 +718,15 @@ ul.submenu li:hover {
 .sourcebook-active .card-img-box img {
     object-fit: cover;
 }
-.sourcebook-card .card-title {
+.sourcebook-active .card-title {
     /* min-height: 72px; */
     /* font-size: 1rem !important; */
     max-height: 73.22px;
+}
+.studies-active .card-title {
+    font-size: 1.15rem;
+    font-weight: 400 !important;
+    text-align: center;
 }
 .sourcebook-card .card-title a {
     color: var(--ss-dark-blue);
@@ -724,7 +734,7 @@ ul.submenu li:hover {
 .sourcebook-card .card-title a:hover {
     color: var(--ss-dark-blue);
 }
-.sourcebook-card .card-text {
+.studies-active .card-text {
     /* min-height: 144px; */
     min-height: 96px;
     font-size: 15px;
@@ -751,8 +761,19 @@ ul.submenu li:hover {
     /* transform: translateY(7px); */
     /* transition: all 0.35s ease; */
 }
-.sourcebook-card .card-body {
+.sourcebook-active .card-body {
     min-height: 208px;
+}
+.studies-active .card-body {
+    min-height: 175px;
+}
+.sourcebook-active .owl-item,
+.studies-active .owl-item {
+    margin-right: 15px !important;
+}
+.sourcebook-active .owl-stage,
+.studies-active .owl-stage {
+    display: flex !important;
 }
 /* sourcebook carosel btn */
 .sourcebook-active .owl-nav,
@@ -807,37 +828,47 @@ ul.submenu li:hover {
         font-size: 14px;
         width: 90px;
     }
+    .sourcebook-active, 
+    .studies-active {
+        padding: 35px 0 0;
+    }
     .sourcecard-wrapper {
         max-width: 100%;
     }
-    .sourcebook-active .owl-nav,
-    .studies-active .owl-nav {
-        position: inherit;
-        transform: none;
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
+    .studies-active .card-img-box {
+        height: inherit;
     }
-    .sourcebook-active .owl-nav button,
-    .studies-active .owl-nav button {
-        margin: 0 5px;
-        width: 35px;
-        height: 35px;
+    .sourcebook-active .card-body,
+    .studies-active .card-body {
+        min-height: auto;
     }
-    .sourcebook-active .owl-nav .owl-prev,
-    .sourcebook-active .owl-nav .owl-next,
-    .studies-active .owl-nav .owl-prev,
-    .studies-active .owl-nav .owl-next {
-        position: inherit;
+    .sourcebook-active .card-title {
+        max-height: auto;
     }
-    .sourcebook-active .owl-nav .owl-prev,
+    .sourcebook-active .card-text {
+        min-height: auto;
+    }
+
+    .sourcebook-active .owl-nav .owl-prev, 
     .studies-active .owl-nav .owl-prev {
-        left: auto;
+        position: initial;
     }
-    .sourcebook-active .owl-nav .owl-next,
-    .studies-active .owl-nav .owl-next {
-        right: auto;
+
+    .sourcebook-active .owl-nav button, 
+    .studies-active .owl-nav button {
+        background: none !important;
+        border: none !important;
+        width: initial;
+        height: 20px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    .sourcebook-active .owl-nav, 
+    .studies-active .owl-nav {
+        width: initial;
+        top: 15px !important;
+        transform: none;
     }
 }
 /* ============ sourcebook inner page css  =================================== */
@@ -1120,6 +1151,7 @@ aside.archive-sidebar {
 .studies-tab nav {
     /* min-height: 42px; */
     position: relative;
+    padding: 0 15px;
 }
 
 .studies-tab .nav {
@@ -1135,24 +1167,25 @@ aside.archive-sidebar {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    padding: 0 4px;
+    cursor: pointer;
 }
 .tab-scroll-btn span {
-    width: 30px;
+    /* width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     background: #fff;
-    border: 1px solid var(--ss-dark-blue);
-    cursor: pointer;
+    border: 1px solid var(--ss-dark-blue); */
 }
 .scroll-next {
-    right: -20px;
+    right: -3px;
 }
 
 .scroll-prev {
-    left: -20px;
+    left: -3px;
 }
 
 .studies-tab button {
