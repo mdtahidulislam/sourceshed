@@ -181,9 +181,13 @@
             $item.animate({'left':'+=200px'});
         }
     });
-    // $(".tab-scroll-btn").click(function(e, delta){
-    //     $(".studies-tab button").scrollLeft -= (delta * 40);
-    //     e.preventDefault();
-    // });
+    
+    // responsive tab
+    $(".sourcebook-tab .nav-tabs").click(function(){
+        $(this).toggleClass("popup");
+    });
+    $(".studies-tab .nav-tabs").click(function(){
+        $(this).toggleClass("popup");
+    });
 
 })(jQuery);

@@ -683,10 +683,67 @@ ul.submenu li:hover {
 .sourcebook-tab .nav-link:hover::before{
     background: transparent;
 } */
-@media (max-width: 990px) {
-    .sourcebook-tab .nav {
+@media (max-width: 600px) {
+    /* .sourcebook-tab .nav {
         flex-wrap: nowrap;
         overflow: auto;
+    } */
+    .sourcebook-tab .nav,
+    .studies-tab .nav {
+        flex-direction: column;
+    }
+    .studies-tab nav {
+        padding: 0 !important;
+    }
+    .sourcebook-tab .nav-link.active::before, 
+    .studies-tab .nav-link.active::before {
+        height: 0;
+    }
+    .sourcebook-tab .nav .nav-link,
+    .studies-tab .nav .nav-link {
+        background: black !important;
+        color: #fff;
+        display: none;
+    }
+    .studies-tab .nav-link {
+        margin-bottom: 0 !important;
+    }
+    .sourcebook-tab .nav-link,
+    .studies-tab .nav-link {
+        font-size: 14px;
+    }
+    .sourcebook-tab .nav-link.active,
+    .studies-tab .nav-link.active {
+        display: block;
+    }
+    .sourcebook-tab .nav.popup .nav-link,
+    .studies-tab .nav.popup .nav-link {
+        display: block;
+    }
+    .sourcebook-tab .nav,
+    .studies-tab .nav {
+        position: relative;
+    }
+    .sourcebook-tab .nav:after,
+    .studies-tab .nav:after {
+        content: '\f107';
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: #fff;
+        position: absolute;
+        top: 20px;
+        transform: translateY(-50%);
+        right: 16px;
+    }
+    .nav.popup:after {
+        transform: rotate(-180deg);
+        transform-origin: 54% 25%;
+    }
+    .tab-scroll-btn {
+        display: none;
+    }
+    .studies-tab nav {
+        padding: 0;
     }
 }
 /* sourcebook carousel */
