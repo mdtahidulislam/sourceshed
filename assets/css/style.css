@@ -699,15 +699,19 @@ ul.submenu li:hover {
 .sourcebook-card {
     overflow: hidden;
 }
-.card-img-box {
+.sourcebook-active .card-img-box {
     overflow: hidden;
     min-height: 245px;
     display: flex;
 }
 .studies-active .card-img-box {
-    min-height: 245px;
+    height: 170px;
+    background: var(--ss-light-blue-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.card-img-box img {
+.sourcebook-active .card-img-box img {
     object-fit: cover;
 }
 .sourcebook-card .card-title {
