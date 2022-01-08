@@ -31,7 +31,7 @@
     .doc-main-left {
         /* display: none; */
         position: fixed;
-        top: 89px;
+        top: 85px;
         background: #fff;
         height: 100vh;
         z-index: 999;
