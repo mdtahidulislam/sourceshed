@@ -55,6 +55,7 @@ input, select,button:focus {
     --ss-light-blue-3: #d9edf7;
 
     --ss-green: #339966;
+    --ss-dark-green: #159527;
     --ss-brown: #993300;
 
     --ss-text-xss: 12px;
@@ -97,6 +98,9 @@ html, body{
 .dark-blue-bg {
     background-color: var(--ss-dark-blue);
 }
+.light-blue-bg {
+    background-color: var(--ss-light-blue);
+}
 .light-blue-bg-3 {
     background-color: var(--ss-light-blue-3);
 }
@@ -108,6 +112,12 @@ html, body{
 }
 .light-ash-bg-2{
     background-color: var(--ss-light-ash-2)
+}
+.green-bg {
+    background-color: var(--ss-green);
+}
+.dark-green-bg {
+    background-color: var(--ss-dark-green);
 }
 /* -------- text color -------- */
 .text-white{
@@ -881,63 +891,25 @@ ul.submenu li:hover {
     right: -20px;
     position: absolute;
 }
-@media (max-width: 600px) {
-    .subtitle-wrapper h2 {
-        font-size: 18px;
-    }
-    .tab-viewall {
-        font-size: 14px;
-        width: 90px;
-    }
-    .sourcebook-active, 
-    .studies-active {
-        padding: 35px 0 0;
-    }
-    .sourcecard-wrapper {
-        max-width: 100%;
-    }
-    .studies-active .card-img-box {
-        height: inherit;
-    }
-    .sourcebook-active .card-body,
-    .studies-active .card-body {
-        min-height: auto;
-    }
-    .sourcebook-active .card-title {
-        max-height: auto;
-    }
-    .sourcebook-active .card-text {
-        min-height: auto;
-    }
-
-    .sourcebook-active .owl-nav .owl-prev, 
-    .studies-active .owl-nav .owl-prev {
-        position: initial;
-    }
-
-    .sourcebook-active .owl-nav button, 
-    .studies-active .owl-nav button {
-        background: none !important;
-        border: none !important;
-        width: initial;
-        height: 20px;
-        border-radius: 0px;
-        box-shadow: none;
-    }
-
-    .sourcebook-active .owl-nav, 
-    .studies-active .owl-nav {
-        width: initial;
-        top: 15px !important;
-        transform: none;
-    }
-}
 /* ============ sourcebook inner page css  =================================== */
 /* main doc */
 .doc-main {
     width: calc(100% - 280px);
     flex: 0 0 calc(100% - 280px);
     max-width: 100%;
+}
+.doc-header-link-right ul li a {
+    display: inline-block;
+    padding: 5px 7px;
+    border-radius: 5px;
+    transition: all 0.35s ease;
+}
+.doc-header-link-right ul li {
+    padding-left: 15px;
+}
+.doc-header-forumlink a:hover,
+.doc-header-submitcontent a:hover {
+    background: #7A7A7A;
 }
 .doc-main-left {
     width: 100%;
@@ -1161,32 +1133,8 @@ ol.reference-list .ref_active {
 .doc-sidebar-list-item a:hover {
     color: var(--ss-dark-blue);
 }
-@media (max-width: 1024px) {
-    .doc-body {
-        flex-direction: column;
-    }
-    .doc-body > div {
-        max-width: 100%;
-    }
-}
-@media (max-width: 768px) {
-    .main-wrapper-row,
-    .doc-widget {
-        flex-direction: column;
-    }
-    .doc-main {
-        width: 100%;
-    }
-    .doc-widget > div {
-        max-width: 100%;
-    }
-    .doc-widget-col-2 {
-        border-top: 2px solid var(--ss-light-gray-3);
-    }
-    .doc-widget-col-3 {
-        border-left: 2px solid var(--ss-light-gray-3);
-    }
-}
+
+
 
 /* ============ source archive page css  =================================== */
 aside.archive-sidebar {
