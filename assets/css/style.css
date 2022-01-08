@@ -1228,3 +1228,7 @@ aside.archive-sidebar {
     position: relative;
 }
 
+.mobile-review-box strong{
+    line-height: 2;
+    display: inline-block;
+}

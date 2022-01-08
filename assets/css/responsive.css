@@ -144,4 +144,18 @@
         text-align: center;
         cursor: pointer;
     }
+    .mobile-show.show-details:after {
+        display: none;
+    }
+    
+    .mobile-show.show-details {
+        margin-top: 0;
+    }
+    .doc-widget-col.doc-widget-col-1 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .doc-sidebar{
+        max-width: 100%;
+    }
 }
