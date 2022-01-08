@@ -688,6 +688,10 @@ ul.submenu li:hover {
         flex-wrap: nowrap;
         overflow: auto;
     } */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .sourcebook-tab .nav,
     .studies-tab .nav {
         flex-direction: column;
@@ -976,7 +980,7 @@ ul.submenu li:hover {
 /* .doc-dropdown ul li:nth-child(1) {
     padding-left: 7px;
 } */
-.doc-dropdown ul li:nth-child(2),
+/* .doc-dropdown ul li:nth-child(2),
 .doc-dropdown ul li:nth-child(14),
 .doc-dropdown ul li:nth-child(4),
 .doc-dropdown ul li:nth-child(9),
@@ -992,7 +996,7 @@ ul.submenu li:hover {
 .doc-dropdown ul li:nth-child(6),
 .doc-dropdown ul li:nth-child(7) {
     padding-left: 28px;
-}
+} */
 .doc-dropdown ul li a {
     font-size: var(--ss-text-xs);
 }
@@ -1064,6 +1068,9 @@ ul.submenu li:hover {
 .doc-content-title {
     position: relative;
     cursor: pointer;
+    background: #DDDDDD;
+    padding: 0px 10px;
+    border-bottom: 1px solid #fff;
 }
 .doc-detail-btn {
     width: 100%;

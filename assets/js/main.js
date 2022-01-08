@@ -102,7 +102,7 @@
          * close all opened right doc and
         */
         $(item).click(function(){
-            $(`#${hrefVal}`).addClass("active").siblings().removeClass('active');
+            $(`#${hrefVal}`).addClass("active").scrollTop(100).siblings().removeClass('active');
         });
         /**
          * toggle right doc by clicking it
@@ -189,5 +189,6 @@
     $(".studies-tab .nav-tabs").click(function(){
         $(this).toggleClass("popup");
     });
+
 
 })(jQuery);
