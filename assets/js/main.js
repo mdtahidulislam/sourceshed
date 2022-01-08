@@ -236,4 +236,9 @@
         $(".doc-main-left").removeClass("active");
     });
 
+    // show details
+    $(".mobile-show:after").on("click",function(){
+        $(this).attr("showDetails", "");
+    });
+
 })(jQuery);
