@@ -103,26 +103,48 @@
         */
          $(".doc-index a").on('click', function(e){
             e.preventDefault();
-            $("html, body").animate({ scrollTop: 200 }, "slow");
-            var hrefVal = $(this).attr("href");
-            $(hrefVal).addClass("active").scrollTop(100).siblings().removeClass('active');
+            e.stopPropagation();
+            let hrefVal = $(this).attr("href");
+            $(".doc-index li").removeClass('active_menu');
+            $(this).parent().addClass("active_menu");
+            // $("html, body").animate({ scrollTop: 200 }, "slow");
+            // var hrefVal = $(this).attr("href");
+            // console.log(hrefVal);
+            // $(this).parent().addClass("active").siblings().removeClass('active');
+
+            if(!$(hrefVal).parents('.doc-content').hasClass('active')){
+                $(hrefVal).parents('.doc-content').addClass('active').siblings().removeClass('active');
+            }
+            $(hrefVal).addClass('active').siblings().removeClass('active');
+
+            $('html, body').animate({
+                scrollTop: $(hrefVal).offset().top - 100
+            }, {duration: 500, easing: "linear" });
+
+            // $(hrefVal).children(".doc-content-title").click(function(){
+            //     // toggle current doc
+            //     $(`#$hrefVal}`).children(".doc-content-title").parent().toggleClass("active");
+            //     // close others openeddoc
+            //     $(`#${hrefVal}`).siblings().removeClass("active");
+            //     // add active class on left panel
+            //     var divId = $(`#${hrefVal}`).attr("id");
+            //     //console.log(divId);
+            //     if(hrefVal === divId){
+            //         $(item).parent().toggleClass("active").siblings().removeClass("active");
+            //     };
+                
+            // });
+
+
+        });
+        $('.doc-content').on('click', function(){
+            console.log(this);
+            $(this).toggleClass('active').siblings().removeClass('active');
         });
         /**
          * toggle right doc by clicking it
         */
-        $(`#${hrefVal}`).children(".doc-content-title").click(function(){
-            // toggle current doc
-            $(`#${hrefVal}`).children(".doc-content-title").parent().toggleClass("active");
-            // close others openeddoc
-            $(`#${hrefVal}`).siblings().removeClass("active");
-            // add active class on left panel
-            var divId = $(`#${hrefVal}`).attr("id");
-            //console.log(divId);
-            if(hrefVal === divId){
-                $(item).parent().toggleClass("active").siblings().removeClass("active");
-            };
-            
-        });
+  
         /**
          * close other opend right doc
         */
@@ -138,14 +160,23 @@
     //});
 
     // open all doc when clik on reference
-    $(".ref-no").each(function(index,item){
+    // $(".ref-no").each(function(index,item){
         //console.log($(this).attr("href"));
-        $(this).click(function(){
-            $(".doc-content").each(function(index, item){
-                $(this).addClass("active");
-            });
+        $(".ref-no").on('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            console.log(this);
+            $('#doc-reference').addClass('active');
+            let hrefVal = $(this).attr("href");
+            $(hrefVal).toggleClass('ref_active').siblings().removeClass('ref_active');
+            $('html, body').animate({
+                scrollTop: $(hrefVal).offset().top - 100
+            }, {duration: 500, easing: "linear" });
+            // $(".doc-content").each(function(index, item){
+            //     $(this).addClass("active");
+            // });
         });
-    });
+    // });
     /**
      * change subtitle by ckicking tab
     */
@@ -192,6 +223,7 @@
     $(".studies-tab .nav-tabs").click(function(){
         $(this).toggleClass("popup");
     });
+    
 
 
 })(jQuery);
