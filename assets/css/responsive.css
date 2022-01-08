@@ -1,0 +1,89 @@
+@media (max-width: 1024px) {
+    .doc-body {
+        flex-direction: column;
+    }
+    .doc-body > div {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-wrapper-row,
+    .doc-widget {
+        flex-direction: column;
+    }
+    .doc-main {
+        width: 100%;
+    }
+    .doc-header-link,
+    .doc-header-link-right ul {
+        flex-direction: column !important;
+        justify-content: start !important;
+        align-items: start !important;
+    }
+    .doc-header-link-right ul li {
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+    .doc-widget > div {
+        max-width: 100%;
+    }
+    .doc-widget-col-2 {
+        border-top: 2px solid var(--ss-light-gray-3);
+    }
+    .doc-widget-col-3 {
+        border-left: 2px solid var(--ss-light-gray-3);
+    }
+}
+
+@media (max-width: 600px) {
+    .subtitle-wrapper h2 {
+        font-size: 18px;
+    }
+    .tab-viewall {
+        font-size: 14px;
+        width: 90px;
+    }
+    .sourcebook-active, 
+    .studies-active {
+        padding: 35px 0 0;
+    }
+    .sourcecard-wrapper {
+        max-width: 100%;
+    }
+    .studies-active .card-img-box {
+        height: inherit;
+    }
+    .sourcebook-active .card-body,
+    .studies-active .card-body {
+        min-height: auto;
+    }
+    .sourcebook-active .card-title {
+        max-height: auto;
+    }
+    .sourcebook-active .card-text {
+        min-height: auto;
+    }
+
+    .sourcebook-active .owl-nav .owl-prev, 
+    .studies-active .owl-nav .owl-prev {
+        position: initial;
+    }
+
+    .sourcebook-active .owl-nav button, 
+    .studies-active .owl-nav button {
+        background: none !important;
+        border: none !important;
+        width: initial;
+        height: 20px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    .sourcebook-active .owl-nav, 
+    .studies-active .owl-nav {
+        width: initial;
+        top: 15px !important;
+        transform: none;
+    }
+}
