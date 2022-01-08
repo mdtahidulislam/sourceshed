@@ -964,7 +964,7 @@ ul.submenu li:hover {
 /* .doc-index ul li.active a {
     color: var(--ss-dark-blue);
 } */
-.doc-index ul li.active > a {
+.doc-index ul li.active_menu > a {
     color: var(--ss-dark-blue);
 }
 .doc-dropdown ul {
@@ -976,6 +976,9 @@ ul.submenu li:hover {
 .doc-dropdown ul li {
     border-bottom: none;
     padding: 2px 0px 2px 7px;
+}
+ol.reference-list .ref_active {
+    color: blue;
 }
 /* .doc-dropdown ul li:nth-child(1) {
     padding-left: 7px;
