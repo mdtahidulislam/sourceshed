@@ -246,13 +246,18 @@
     =================================*/
     $(".sa-sidebar-item-title").on("click",function(e){
         e.preventDefault();
-        $(".sa-sidebar-item-content").slideToggle();
-        
-        $(this).addClass("active").siblings().removeClass("active");
+        $(this).next().slideToggle();
+        $(this).parent().addClass("active").siblings().removeClass("active");
+        $(this).parent().siblings().children(".sa-sidebar-item-content").css({"display": "none"});
     });
     $(".sa-sidebar-subitem-title").on("click",function(e){
         e.preventDefault();
-        $(".sa-sidebar-subitem-content").slideToggle();
+        e.stopPropagation();
+        // toggle content container
+        $(this).next().slideToggle();
+        // toggle arrow icon
+        $(this).children(".arrow-right").toggleClass("active");
+        $(this).children(".arrow-down").toggleClass("active");
     });
 
 
