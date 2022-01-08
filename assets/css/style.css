@@ -1174,7 +1174,7 @@ ol.reference-list .ref_active {
     padding: 20px 20px;
     cursor: pointer;
 }
-.sa-sidebar-item-title.active {
+.sa-sidebar-item.active .sa-sidebar-item-title {
     border-right: 3px solid var(--ss-dark-blue);
 }
 .sa-sidebar-item-title {
@@ -1189,20 +1189,26 @@ ol.reference-list .ref_active {
 .sa-sidebar-item-content ul li {
     display: flex;
     align-items: center;
-    margin: 5px 0;
+    margin: 10px 0;
 }
-.sa-sidebar-item-content ul li a {
+.sa-sidebar-item a {
     font-size: 14px;
     color: #566e8b;
 }
-.sa-sidebar-item-content  a:hover {
+.sa-sidebar-item  a:hover {
     color: #528fff;
 }
-.arrow-right {
+.arrow-right,
+.arrow-down {
     margin-right: 5px;
 }
-.arrow-down {
+.arrow-down,
+.arrow-right {
     display: none;
+}
+.arrow-right.active,
+.arrow-down.active {
+    display: block;
 }
 .sa-sidebar-subitem-title {
     font-size: 14px;
@@ -1210,9 +1216,16 @@ ol.reference-list .ref_active {
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin: 10px 0;
 }
 .sa-sidebar-subitem-content {
     display: none;
+}
+.level-2 {
+    padding-left: 10px;
+}
+.level-3 {
+    padding-left: 20px;
 }
 .archive-docs {
     flex: 1 1 70%;
