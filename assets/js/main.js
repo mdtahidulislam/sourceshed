@@ -91,18 +91,21 @@
     $(".doc-detail-btn").click(function(){
         $(this).toggleClass("active");
     });
-    $(".doc-index > ul > li > a").each(function(index,item){
+    //$(".doc-index > ul > li > a").each(function(index,item){
         //console.log($(item));
         //console.log($(index)[0]);
         // get each left panelhref val
-        var hrefVal = $(item).attr("href").substring(1);
+        //var hrefVal = $(item).attr("href").substring(1);
 
         /**
          * open current right doc by clicking left panel and
          * close all opened right doc and
         */
-        $(item).click(function(){
-            $(`#${hrefVal}`).addClass("active").scrollTop(100).siblings().removeClass('active');
+         $(".doc-index a").on('click', function(e){
+            e.preventDefault();
+            $("html, body").animate({ scrollTop: 200 }, "slow");
+            var hrefVal = $(this).attr("href");
+            $(hrefVal).addClass("active").scrollTop(100).siblings().removeClass('active');
         });
         /**
          * toggle right doc by clicking it
@@ -132,7 +135,7 @@
         //         $(item).parent().toggleClass("active").siblings().removeClass("active");
         //     };
         // });
-    });
+    //});
 
     // open all doc when clik on reference
     $(".ref-no").each(function(index,item){
