@@ -224,6 +224,16 @@
         $(this).toggleClass("popup");
     });
     
-
+    // doc index menu
+    $(".doc-index-menubtn span").on("click",function(){
+        $(".doc-main-left").addClass("active");
+        $(".doc-dropdown ul").addClass("active");
+    });
+    $(".doc-index-close").on("click",function(){
+        $(".doc-main-left").removeClass("active");
+    });
+    $(".doc-index a").on("click",function(){
+        $(".doc-main-left").removeClass("active");
+    });
 
 })(jQuery);

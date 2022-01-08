@@ -911,6 +911,36 @@ ul.submenu li:hover {
 .doc-header-submitcontent a:hover {
     background: #7A7A7A;
 }
+.doc-index-menubtn {
+    display: none;
+}
+.doc-index-menubtn span {
+    position: relative;
+    cursor: pointer;
+}
+.doc-index-menubtn span:after {
+    content: '\f105';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: -3px;
+    left: calc(100% + 10px);
+    transition: auto;
+    animation: animate 1.5s linear infinite;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(8px);
+    }
+}
 .doc-main-left {
     width: 100%;
     max-width: 23%;
@@ -975,25 +1005,23 @@ ol.reference-list .ref_active {
 .doc-dropdown ul li a {
     font-size: var(--ss-text-xs);
 }
-/**
-* active class added by js
-*/
-
-/* .doc-dropdown ul li:last-child {
-    border-bottom: none;
-} */
-/* .doc-dropdown ul li {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-.doc-dropdown ul li a:nth-child(2) {
-    padding-left: 8px;
-}
-.doc-dropdown ul li a:nth-child(3) {
-    padding-left: 16px;
-} */
 .doc-index-item:hover {
     color: var(--ss-dark-blue);
+}
+/* close btn */
+.doc-index-close {
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    cursor: pointer;
+}
+.doc-index-close i {
+    font-size: 20px;
+    color: var(--ss-dark-blue);
+}
+.doc-index {
+    position: relative;
 }
 /* 
 * uses for sticky header 
@@ -1001,13 +1029,6 @@ ol.reference-list .ref_active {
 .doc-scrollspy > div {
     position: relative;
 }
-/* .doc-scrollspy > div:before {
-    content: '';
-    display: block;
-    height: 100px;
-    margin-top: -100px;
-    visibility: hidden;
-} */
 .doc-main-content {
     width: 100%;
     max-width: 77%;
