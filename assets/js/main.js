@@ -223,4 +223,20 @@
         $(this).addClass('show-details').attr("showDetails", "");
     });
 
+    /*================================
+        source archive page
+    =================================*/
+    $(".sa-sidebar-item-title").on("click",function(e){
+        e.preventDefault();
+        $(".sa-sidebar-item-content").slideToggle();
+        
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+    $(".sa-sidebar-subitem-title").on("click",function(e){
+        e.preventDefault();
+        $(".sa-sidebar-subitem-content").slideToggle();
+    });
+
+
+
 })(jQuery);
