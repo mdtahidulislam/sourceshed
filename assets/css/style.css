@@ -39,21 +39,29 @@ input, select,button:focus {
     --ss-font-primary: 'Merriweather Sans', sans-serif;
 
     --ss-dark: #000000;
+    --ss-dark-1: #333333;
+    --ss-dark-2: #555555;
     --ss-white: #ffffff;
     --ss-light-gray: #8e8e8e;
     --ss-light-gray-2: #c5c9ce;
     --ss-light-gray-3: #ddd;
     --ss-light-gray-4: #EDF2F7;
+    --ss-light-gray-5: #cccccc;
     --ss-dark-gray: #7a7a7a;
     --ss-dark-gray-2: #4d4d4d;
+    --ss-dark-gray-3:#666666;
+    --ss-dark-gray-4: #777777;
     --ss-light-ash: #8EA0AD;
     --ss-light-ash-1: #CAD1DA;
     --ss-light-ash-2: #D1DBE9;
 
     --ss-dark-blue: #011E36;
+    --ss-dark-blue-1: #3272bf;
     --ss-light-blue: #3366ff;
     --ss-light-blue-2: #66ADCC;
     --ss-light-blue-3: #d9edf7;
+    
+    --ss-blue: #050056;
 
     --ss-green: #339966;
     --ss-dark-green: #159527;
@@ -96,6 +104,9 @@ html, body{
 .dark-gray-bg{
     background-color: var(--ss-dark-gray);
 }
+.blue-bg {
+    background-color: var(--ss-blue);
+}
 .dark-blue-bg {
     background-color: var(--ss-dark-blue);
 }
@@ -124,11 +135,17 @@ html, body{
 .text-white{
     color: var(--ss-white);
 }
+.text-dark-1 {
+    color: var(--ss-dark-1);
+}
 .text-dark-gray {
     color: var(--ss-dark-gray);
 }
 .text-dark-gray-2 {
     color: var(--ss-dark-gray-2);
+}
+.text-dark-gray-3 {
+    color: var(--ss-dark-gray-3);
 }
 .text-light-gray {
     color: var(--ss-light-gray);
@@ -138,6 +155,9 @@ html, body{
 }
 .text-dark-blue {
     color: var(--ss-dark-blue);
+}
+.text-dark-blue-1 {
+    color: var(--ss-dark-blue-1);
 }
 .text-green {
     color: var(--ss-green);
@@ -1336,12 +1356,97 @@ ol.reference-list .ref_active {
 .sa-feedback-update span {
     font-style: italic;
 }
+.sa-feedback-modal .modal-title {
+    font-size: 27px;
+    color: #3f5876;
+    line-height: 35px;
+}
+.sa-feedback-modal .modal-header {
+    border-bottom: none;
+    align-items: start;
+}
+.sa-feedback-modal label {
+    font-size: 15px;
+    color: #7e8da2;
+}
+.sa-feedback-modal input:focus,
+.sa-feedback-modal textarea:focus,
+.sa-feedback-modal button:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: none;
+}
+.sa-feedback-modal .modal-footer button {
+    background: #528ffe;
+    border-radius: 100px;
+    padding: 6px 21px;
+    border: none;
+}
 .sa-doc-navigation a {
     color: #566e8b;
     font-weight: 600;
 }
 .sa-doc-navigation svg {
     width: 15px;
+}
+.sa-comment-btn {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--ss-light-gray-3);
+}
+.sa-comment-btn-subscribe {
+    cursor: pointer;
+}
+.sa-comment-form {
+    padding: 22px 0px 5px 0px;
+    margin-bottom: 10px;
+    display: none;
+}
+.sa-comment-form-option {
+    flex-grow: 1;
+    font-size: 13px;
+    padding-right: 5px;
+}
+.sa-comment-form-email {
+    width: 30%;
+    font-size: 14px;
+    padding: 0px 5px  0px 0px;
+}
+.sa-comment-form-btn {
+    font-size: 14px;
+    display: block;
+}
+.sa-comment-form-btn input {
+    padding: 2px 15px;
+    font-size: 16px;
+    border: none;
+}
+.sa-comment-form-option select {
+    width: 100%;
+    padding: 3px;
+    height: 28px;
+    color: var(--ss-dark-gray-4);
+}
+.sa-comment-form-email input {
+    width: 100%;
+    padding: 3px;
+    height: 28px;
+}
+.sa-comment-form select,
+.sa-comment-form input {
+    border: 1px solid var(--ss-light-gray-3);
+}
+.sa-comment-threads {
+    margin: 40px 0;
+}
+.sa-comment-threads-head {
+    padding: 5px 0px;
+    border-bottom: 2px solid var(--ss-light-gray-5);
+}
+.sa-comment-threads-head p {
+    padding: 5px 7px;
+    margin-bottom: -7px;
+    border-bottom: 2px solid var(--ss-dark-blue);
+    font-weight: 600;
 }
 /* ============ footer css  =================================== */
 .footer {

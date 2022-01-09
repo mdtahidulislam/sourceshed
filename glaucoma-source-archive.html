@@ -682,7 +682,7 @@
                                 </a>
                             </li>
                             <li class="mx-2">
-                                <a href="#" class="text-dark-blue d-inline-block">
+                                <a href="#sa-comment-btn" class="comment-scroll-to text-dark-blue d-inline-block">
                                     <span><i class="far fa-comment-dots"></i></span>
                                     <span class="ps-1">No Comments </span>
                                 </a>
@@ -802,11 +802,41 @@
                     <!-- feedback -->
                     <div class="sa-feedback d-flex justify-content-between align-items-center">
                         <div class="sa-feedback-form">
-                            <a href="#">
+                            <a href="#safeedbackModal" data-bs-toggle="modal">
                                 <span class="me-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32px" viewBox="0 0 64 64"><linearGradient id="zWPy7gPuySZ8fg4Y3QF24a" x1="26" x2="26" y1="630.833" y2="619.332" gradientTransform="matrix(1 0 0 -1 0 654)" gradientUnits="userSpaceOnUse" spreadMethod="reflect"><stop offset="0" stop-color="#6dc7ff"></stop><stop offset="1" stop-color="#e6abff"></stop></linearGradient><path fill="url(#zWPy7gPuySZ8fg4Y3QF24a)" d="M15.082,25.762l9.625,8.141c0.746,0.633,1.84,0.633,2.59,0l9.621-8.141 C37.629,25.16,37.203,24,36.27,24H15.73C14.797,24,14.371,25.16,15.082,25.762z"></path><linearGradient id="zWPy7gPuySZ8fg4Y3QF24b" x1="26" x2="26" y1="647.5" y2="596.439" gradientTransform="matrix(1 0 0 -1 0 654)" gradientUnits="userSpaceOnUse" spreadMethod="reflect"><stop offset="0" stop-color="#1a6dff"></stop><stop offset="1" stop-color="#c822ff"></stop></linearGradient><path fill="url(#zWPy7gPuySZ8fg4Y3QF24b)" d="M18,49h16v2H18V49z"></path><linearGradient id="zWPy7gPuySZ8fg4Y3QF24c" x1="32" x2="32" y1="8.915" y2="55.387" gradientUnits="userSpaceOnUse" spreadMethod="reflect"><stop offset="0" stop-color="#1a6dff"></stop><stop offset="1" stop-color="#c822ff"></stop></linearGradient><path fill="url(#zWPy7gPuySZ8fg4Y3QF24c)" d="M48,9c-6.134,0-11.277,4.276-12.637,10H8c-2.758,0-5,2.242-5,5v26c0,2.758,2.242,5,5,5h36 c2.758,0,5-2.242,5-5V35h2v-2h-3c-6.066,0-11-4.934-11-11s4.934-11,11-11s11,4.934,11,11v3c0,1.102-0.898,2-2,2s-2-0.898-2-2v-3 c0-3.859-3.141-7-7-7s-7,3.141-7,7s3.141,7,7,7c2.125,0,4.027-0.953,5.312-2.453C53.918,27.984,55.344,29,57,29c2.207,0,4-1.793,4-4 v-3C61,14.832,55.168,9,48,9z M5,24.109L17.086,34L5,43.891V24.109z M47,50c0,1.652-1.348,3-3,3H8c-1.652,0-3-1.348-3-3v-3.527 l13.668-11.18l4.168,3.41c0.914,0.75,2.039,1.125,3.164,1.125s2.25-0.375,3.164-1.125l4.172-3.41L47,46.473V50z M47,34.949v8.941 L34.914,34l3.618-3.12C40.691,33.18,43.668,34.694,47,34.949z M37.264,29.317l-9.365,7.835c-1.102,0.902-2.699,0.902-3.801,0 L5.699,22.098C6.25,21.434,7.07,21,8,21h27.051C35.025,21.331,35,21.662,35,22C35,24.712,35.837,27.231,37.264,29.317z M48,27 c-2.758,0-5-2.242-5-5s2.242-5,5-5s5,2.242,5,5S50.758,27,48,27z"></path></svg>
                                 </span>Report issue with content
                             </a>
+                            <!-- modal form -->
+                                <div class="modal sa-feedback-modal fade" id="safeedbackModal" tabindex="-1" aria-labelledby="safeedbackModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header pb-0">
+                                                <h5 class="modal-title" id="safeedbackModalLabel">Please provide feedback on content published. Thank you.</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-4">
+                                                        <label class="col-form-label">Name:*</label>
+                                                        <input type="text" class="form-control" id="name" autocomplete="off">
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <label class="col-form-label">Email:*</label>
+                                                        <input type="text" class="form-control" id="email" autocomplete="off">
+                                                    </div>
+                                                    <div class="mb-4">
+                                                        <label  class="col-form-label">Message:*</label>
+                                                        <textarea class="form-control" id="message"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer justify-content-start">
+                                                <button type="button" class="btn btn-primary">Send</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                         <div class="sa-feedback-update">
                             <span>Updated on December 7, 2021</span>
@@ -819,6 +849,44 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42px" viewBox="0 0 50 50" version="1.1"><g id="surface1"><path style=" " d="M 38.035156 13.988281 C 37.628906 13.980469 37.257813 14.222656 37.09375 14.59375 C 36.933594 14.96875 37.015625 15.402344 37.300781 15.691406 L 45.277344 24 L 2.023438 24 C 1.664063 23.996094 1.328125 24.183594 1.148438 24.496094 C 0.964844 24.808594 0.964844 25.191406 1.148438 25.503906 C 1.328125 25.816406 1.664063 26.003906 2.023438 26 L 45.277344 26 L 37.300781 34.308594 C 36.917969 34.707031 36.933594 35.339844 37.332031 35.722656 C 37.730469 36.105469 38.363281 36.09375 38.746094 35.691406 L 49.011719 25 L 38.746094 14.308594 C 38.5625 14.109375 38.304688 13.996094 38.035156 13.988281 Z "></path></g></svg>
                             </span>
                         </a>
+                    </div>
+                    <!-- coment respond -->
+                    <div class="sa-comment">
+                        <div class="sa-comment-btn d-flex justify-content-between align-items-center" id="sa-comment-btn">
+                            <div class="sa-comment-btn-subscribe d-flex align-items-center">
+                                <i class="far fa-envelope text-dark-gray-3 text-xs"></i> 
+                                <span class="mx-2 text-dark-gray-3 text-xs">Subscribe</span> 
+                                <i class="fas fa-caret-down text-dark-gray-3 text-xs"></i>
+                            </div>
+                            <div class="sa-comment-btn-login">
+                                <a href="#" class="text-dark-blue-1 text-xs"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            </div>
+                        </div>
+                        <div class="sa-comment-form">
+                            <form action="" class="d-flex flex-wrap align-items-center">
+                                <div class="sa-comment-form-intro text-dark-1 text-xs pe-1">Notify of </div>
+                                <div class="sa-comment-form-option">
+                                    <select class="">
+                                        <option value="post" selected>new follow-up comments</option>
+                                        <option value="all_comment">new replies to my comments</option>
+                                    </select>
+                                </div>
+                                <div class="sa-comment-form-email">
+                                    <input class="email" type="email" required="required" value="" placeholder="Email">
+                                </div>
+                                <div class="sa-comment-form-btn">
+                                    <input type="submit" value="›" class="blue-bg text-white">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="sa-comment-box pt-4">
+                            <p class="text-dark-1 text-center">Please login to comment</p>
+                        </div>
+                        <div class="sa-comment-threads">
+                            <div class="sa-comment-threads-head d-flex">
+                                <p class="text-dark-2 text-uppercase"><span class="me-1">0</span>Comments</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

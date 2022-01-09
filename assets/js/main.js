@@ -242,6 +242,19 @@
         $(this).children(".arrow-down").toggleClass("active");
     });
 
+    // comment scroll
+    $(".comment-scroll-to").on('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        $('html, body').animate({
+            scrollTop: $(".sa-comment").offset().top - 100
+        }, {duration: 100, easing: "linear" });
+    });
+    // toggle sa comment form
+    $(".sa-comment-btn").on("click", function(){
+        $(".sa-comment-form").slideToggle();
+    });
 
 
 })(jQuery);
