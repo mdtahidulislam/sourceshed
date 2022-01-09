@@ -1314,6 +1314,7 @@ ol.reference-list .ref_active {
     border-radius: 0;
     text-align: center;
     flex: 1 1 auto;
+    padding: 5px 1rem;
     background: var(--ss-light-gray-4);
 }
 

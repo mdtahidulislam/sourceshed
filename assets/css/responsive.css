@@ -158,4 +158,33 @@
     .doc-sidebar{
         max-width: 100%;
     }
+    aside.archive-sidebar {
+        display: none;
+    }
+    .sa-doc-info {
+        flex: 1;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .sa-doc-tab .nav-link {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    .sa-feedback {
+        flex-direction: column;
+        justify-content: start !important;
+        align-items: start !important;
+    }
+    .sa-comment-form-email {
+        width: 100%;
+        margin: 15px 0;
+        padding-right: 0;
+    }
+    .sa-comment-form-btn,.sa-comment-form-btn input {
+        width: 100%;
+    }
+    .sa-comment-form-email,
+    .sa-comment-form-option {
+        padding-right: 0;
+    }
 }
