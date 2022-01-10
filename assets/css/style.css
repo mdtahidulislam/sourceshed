@@ -374,6 +374,7 @@ ul.submenu li:hover {
     font-size: var(--ss-text-xs);
     font-weight: 400;
     color: var(--ss-dark-gray);
+    display: block;
 }
 .header-nav__menu ul li a:hover{
     color: var(--ss-dark-blue);
