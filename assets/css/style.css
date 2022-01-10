@@ -25,9 +25,16 @@ ul{
     list-style-type: none;
 }
 
-input, select, button, textarea:focus {
-    outline: none;
-    box-shadow: none;
+input:focus, 
+select:focus, 
+button:focus, 
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: gainsboro !important;
+}
+select {
+    cursor: pointer;
 }
 
 /* google fonts */
@@ -58,6 +65,7 @@ input, select, button, textarea:focus {
 
     --ss-dark-blue: #011E36;
     --ss-dark-blue-1: #3272bf;
+    --ss-dark-blue-2: #007CFF;
     --ss-light-blue: #3366ff;
     --ss-light-blue-2: #66ADCC;
     --ss-light-blue-3: #d9edf7;
@@ -277,8 +285,9 @@ html, body{
 } */
 /* ---------- btn ---------- */
 .btn-primary{
-    background-color: var(--ss-light-blue);
+    background-color: var(--ss-dark-blue-2);
     padding: 8px 10px;
+    opacity: .6;
 }
 .btn-custom{
     border-radius: 100px;
@@ -1582,13 +1591,35 @@ figure.lp-tab-content-img-box a {
     margin-left: auto;
     margin-right: auto;
 }
-.register-form input:focus,
+.register-logo img {
+    width: 300px;
+}
+.password-box {
+    position: relative;
+}
+.password-box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding: 10px;
+    color: var(--ss-dark-blue-2);
+    font-size: 12px;
+    cursor: pointer;
+}
+.password-box i.fa-eye {
+    display: none;
+}
+.interest {
+    height: 45px;
+}
+/* .register-form input:focus,
 .register-form button:focus,
 .register-form textarea:focus {
     outline: none;
     box-shadow: none;
     border-color: gainsboro;
-}
+} */
 /* ============ footer css  =================================== */
 .footer {
     padding: 40px 0;

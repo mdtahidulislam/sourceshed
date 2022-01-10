@@ -256,5 +256,29 @@
         $(".sa-comment-form").slideToggle();
     });
 
+    // enable create acnt btn
+    $(".form-check-input").on("click", function(){
+        if ($(this).is(':checked')) {
+            $(".create-accountnt").removeAttr("disabled");
+        } else {
+            $(".create-accountnt").attr("disabled", "disabled");
+        }
+    });
+    // password togglebtn
+    $('.password-box .fa-eye-slash').on('click',function(){
+        $(this).css({'display': 'none'});
+        $('.password-box .fa-eye').css({'display': 'block'});
+        if ($('#password').attr('type') === 'password') {
+            $('#password').attr('type', 'text');
+        }
+    });
+    $('.password-box .fa-eye').on('click',function(){
+        $(this).css({'display': 'none'});
+        $('.password-box .fa-eye-slash').css({'display': 'block'});
+        if ($('#password').attr('type') === 'text') {
+            $('#password').attr('type', 'password');
+        }
+    });
+    
 
 })(jQuery);

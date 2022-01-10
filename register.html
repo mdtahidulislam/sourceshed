@@ -463,13 +463,13 @@
         <div class="container">
             <div class="row">
                 <div class="register">
-                    <div class="register-logo">
+                    <div class="register-logo d-flex justify-content-center  align-items-center">
                         <a href="#" class="d-block">
                             <img src="./assets//img/banner-logo.png" alt="Shourceshed" class="img-fluid">
                         </a>
                     </div>
-                    <div class="register-wrapper">
-                        <div class="register-header d-flex justify-content-between align-items-center">
+                    <div class="register-wrapper mt-5">
+                        <div class="register-header d-flex justify-content-between align-items-center mb-4">
                             <span class="text-xl text-dark-blue">Create an Account
                             </span>
                             <span>or<a href="#" class="d-inline-block text-xs text-light-blue">sign in</a></span>
@@ -478,28 +478,32 @@
                             <form action="">
                                 <form>
                                     <div class="mb-3">
-                                      <label class="form-label">Email address</label>
+                                      <label class="form-label text-dark-blue text-xs">Email</label>
                                       <input type="email" class="form-control" id="email">
                                     </div>
                                     <div class="mb-3">
-                                      <label class="form-label">Password</label>
-                                      <input type="password" class="form-control" id="password">
+                                      <label class="form-label text-dark-blue text-xs">Password</label>
+                                      <div class="password-box">
+                                        <input type="password" class="form-control" id="password">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                      </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">First Name</label>
+                                        <label class="form-label text-dark-blue text-xs">First Name</label>
                                         <input type="text" class="form-control" id="fname">
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Last Name</label>
+                                        <label class="form-label text-dark-blue text-xs">Last Name</label>
                                         <input type="text" class="form-control" id="lname">
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Nickname</label>
+                                        <label class="form-label text-dark-blue text-xs">Nickname</label>
                                         <input type="text" class="form-control" id="nname">
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Role</label>
-                                        <select class="form-select">
+                                        <label class="form-label text-dark-blue text-xs">Role</label>
+                                        <select class="form-select role">
                                             <option selected>----</option>
                                             <option value="Ophthalmology">Ophthalmology</option>
                                             <option value="Orthoptics">Orthoptics</option>
@@ -509,8 +513,8 @@
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Subspecialty interest (optional)</label>
-                                        <select class="form-select" multiple>
+                                        <label class="form-label text-dark-blue text-xs">Subspecialty interest (optional)</label>
+                                        <select class="form-select interest" multiple>
                                             <option value="Cataract surgery">Cataract surgery</option>
                                             <option value="Refractive surgery">Refractive surgery</option>
                                             <option value="Corneal and External eye diseases">Corneal and External eye diseases</option>
@@ -528,13 +532,13 @@
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Current Affiliation (optional)</label>
-                                        <small>Eg. University of New South Wales</small>
+                                        <label class="form-label text-dark-blue text-xs">Current Affiliation (optional)</label>
+                                        <p class="text-xs text-dark-gray mb-2">Eg. University of New South Wales</p>
                                         <input type="text" class="form-control" name="affiliate" id="affiliate">
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Position (optional)</label>
-                                        <small>Eg. conjoint lecturer</small>
+                                        <label class="form-label text-dark-blue text-xs">Position (optional)</label>
+                                        <p class="text-xs text-dark-gray mb-2">Eg. conjoint lecturer</p>
                                         <input type="text" class="form-control" name="position" id="position">
                                     </div>
                                     <div class="mb-3 form-check">
@@ -544,7 +548,7 @@
                                           <a class="d-inline-block" href="#">Privacy Policy</a>.
                                         </label>
                                     </div>
-                                    <button type="submit" class="btn btn-custom btn-primary">Create Account</button>
+                                    <button type="submit" class="btn btn-custom btn-primary create-accountnt" disabled="disabled">Create Account</button>
                                 </form>
                             </form>
                         </div>
