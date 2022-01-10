@@ -162,17 +162,17 @@
     /**
      * change subtitle by ckicking tab
     */
-    $(".sourcebook-tab button").each(function(index, item){
-        $(this).click(function(){
-            var tabId = $(this).attr("id");
-            $(".subtitle-wrapper h2").each(function(index, item){
-                var subtitleAttr = $(this).attr("subtitle-labelledby");
-                if (tabId === subtitleAttr) {
-                    $(this).addClass("active").siblings().removeClass("active");
-                }
-            });
-        });
-    });
+    // $(".sourcebook-tab button").each(function(index, item){
+    //     $(this).click(function(){
+    //         var tabId = $(this).attr("id");
+    //         $(".subtitle-wrapper h2").each(function(index, item){
+    //             var subtitleAttr = $(this).attr("subtitle-labelledby");
+    //             if (tabId === subtitleAttr) {
+    //                 $(this).addClass("active").siblings().removeClass("active");
+    //             }
+    //         });
+    //     });
+    // });
     $(".studies-tab button").each(function(index, item){
         $(this).click(function(){
             var tabTitle = $(this).text();

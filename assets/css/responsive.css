@@ -69,6 +69,17 @@
         display: none;
     }
 }
+@media (max-width: 768px) {
+    .lp-content-left {
+        display: none;
+    }
+    .lp-tab-content-list {
+        padding-bottom: 20px;
+    }
+    .lp-tab-content-box ul {
+        padding-top: 8px;
+    }
+}
 
 @media (max-width: 600px) {
     .subtitle-wrapper h2 {
@@ -186,5 +197,15 @@
     .sa-comment-form-email,
     .sa-comment-form-option {
         padding-right: 0;
+    }
+    /* =============== retina landing page =================== */
+    .ip-indexing-area {
+        padding-left: 0 !important;
+    }
+    ul.lpi-level-2 {
+        padding-left: 17px;
+    }
+    ul.lpi-level-3 {
+        padding-left: 22px;
     }
 }

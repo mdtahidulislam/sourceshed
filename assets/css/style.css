@@ -292,6 +292,9 @@ html, body{
 .btn-custom__red{
     background-color: var(--l-color-red);
 }
+.box-shadow-none {
+    box-shadow: none !important;
+}
 
 body{
     font-family: var(--ss-font-primary);
@@ -665,6 +668,9 @@ ul.submenu li:hover {
 }
 .lp-tab .nav-link {
     color: var(--ss-dark-gray);
+    max-width: 100%;
+    flex-basis: 0%;
+    flex-grow: 1;
 }
 .sourcebook-tab .nav-link,
 .lp-tab .nav-link {
@@ -881,7 +887,8 @@ ul.submenu li:hover {
     /* transition: all 0.35s ease; */
 }
 .sourcebook-active .card-body {
-    min-height: 208px;
+    /* min-height: 208px; */
+    min-height: 232px;
 }
 .studies-active .card-body {
     min-height: 175px;
@@ -1491,13 +1498,9 @@ div.sa-sidebar-subitem-title.active + div.sa-sidebar-subitem-content {
 }
 .lp-content-left {
     flex: 0 0 17%;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 .lp-content-right {
     flex: 1;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 .lp-index {
     padding: 20px;
@@ -1543,6 +1546,15 @@ ul.lpi-level-3 {
 .lp-tab-content-box ul li a:hover {
     color: var(--ss-light-blue);
 }
+.lp-tab-content-list ul {
+    padding-bottom: 15px;
+}
+.lp-tab-content-list ul li {
+    word-break: break-all;
+}
+.lp-tab-content-list a {
+    display: inline-block;
+}
 .bg-orinoco {
     background-color: #D5D6AA;
 }
@@ -1554,8 +1566,13 @@ ul.lpi-level-3 {
 }
 figure.lp-tab-content-img-box {
     margin-bottom: 0;
-    width: 30%;
+    width: 20%;
     margin-right: 15px;
+    flex: 0 0 auto;
+}
+figure.lp-tab-content-img-box a {
+    display: block;
+    height: 100%;
 }
 /* ============ footer css  =================================== */
 .footer {
