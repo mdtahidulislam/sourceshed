@@ -12,7 +12,6 @@
 }
 a{
     text-decoration: none;
-    display: block;
     transition: 0.3s ease;
 }
 
@@ -26,9 +25,9 @@ ul{
     list-style-type: none;
 }
 
-input, select,button:focus {
+input, select, button, textarea:focus {
     outline: none;
-    
+    box-shadow: none;
 }
 
 /* google fonts */
@@ -278,7 +277,7 @@ html, body{
 } */
 /* ---------- btn ---------- */
 .btn-primary{
-    background-color: var(--ss-dark-blue);
+    background-color: var(--ss-light-blue);
     padding: 8px 10px;
 }
 .btn-custom{
@@ -1573,6 +1572,21 @@ figure.lp-tab-content-img-box {
 figure.lp-tab-content-img-box a {
     display: block;
     height: 100%;
+}
+/* ============ register page css  =================================== */
+.register {
+    padding: 60px 0px 0px;
+    max-width: 450px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.register-form input:focus,
+.register-form button:focus,
+.register-form textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: gainsboro;
 }
 /* ============ footer css  =================================== */
 .footer {
