@@ -679,7 +679,6 @@ ul.submenu li:hover {
     color: var(--ss-dark-gray);
     max-width: 100%;
     flex-basis: 0%;
-    flex-grow: 1;
 }
 .sourcebook-tab .nav-link,
 .lp-tab .nav-link {

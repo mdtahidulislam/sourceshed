@@ -79,6 +79,9 @@
     .lp-tab-content-box ul {
         padding-top: 8px;
     }
+    .lp-tab .nav-link {
+        flex-basis: 100%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -209,7 +212,9 @@
         padding-left: 22px;
     }
     .lp-tab .nav-link {
-        flex-grow: 1;
+        white-space: normal;
+        padding: 8px 20px;
+        font-size: 15px;
     }
 
 }
