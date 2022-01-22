@@ -210,10 +210,14 @@
         padding-left: 0 !important;
     }
     ul.lpi-level-2 {
-        padding-left: 17px;
+        padding-left: 15px;
     }
     ul.lpi-level-3 {
-        padding-left: 22px;
+        padding-left: 18px;
+    }
+    ul.lpi-level-4,
+    ul.lpi-level-5 {
+        padding-left: 15px;
     }
     .lp-tab .nav-link {
         white-space: normal;
