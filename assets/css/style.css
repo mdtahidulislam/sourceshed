@@ -1527,10 +1527,10 @@ div.sa-sidebar-subitem-title.active + div.sa-sidebar-subitem-content {
 .ip-indexing-area ul li a:hover {
     color: var(--ss-light-blue) !important;
 }
-ul.lpi-level-2 {
-    padding-left: 40px;
-}
-ul.lpi-level-3 {
+ul.lpi-level-2,
+ul.lpi-level-3,
+ul.lpi-level-4,
+ul.lpi-level-5 {
     padding-left: 40px;
 }
 .lp-tab-content-box {

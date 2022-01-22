@@ -82,6 +82,10 @@
     .lp-tab .nav-link {
         flex-basis: 100%;
     }
+    .lp-style-two .lp-tab .nav-link {
+        flex-basis: 0;
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 600px) {
@@ -219,5 +223,10 @@
     .ip-indexing-area ul li span, 
     .ip-indexing-area ul li a {
         font-size: 16px;
+    }
+}
+@media (max-width: 425px) {
+    .lp-style-two .lp-tab .nav-link {
+        flex-basis: 100%;
     }
 }
