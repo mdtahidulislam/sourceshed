@@ -216,5 +216,8 @@
         padding: 8px 20px;
         font-size: 15px;
     }
-
+    .ip-indexing-area ul li span, 
+    .ip-indexing-area ul li a {
+        font-size: 16px;
+    }
 }
